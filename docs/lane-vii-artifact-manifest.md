@@ -1,6 +1,6 @@
 # Lane VII Artifact Manifest
 
-Status: export manifest seeded from local Lane VII PDF/TeX builds and chat-draft tranche ledger.
+Status: export manifest seeded from local Lane VII PDF/TeX builds and chat/source tranche ledger.
 Date: 2026-05-09.
 
 ## Policy
@@ -19,6 +19,12 @@ Markdown/LaTeX source is canonical. PDFs are distribution artifacts. Binary PDFs
 | v1.6-FRI | First Non-Recoupling Vertex Audit | `lane_vii_first_non_recoupling_vertex_audit_v1_6.tex` | `5a01cdf0495f666cd548b7d4a5e9d2499ead13f154e2913309455f58408155a5` | `lane_vii_first_non_recoupling_vertex_audit_v1_6.pdf` | `5be7fbc7468247df174ea4b5f3afcaf0b65fde3962a655403aef0fa2e3bf8652` | Exported locally; recoupling/non-recouping vertex audit and residual trace/loop density obstruction. |
 | v1.9.1-FRI | Residual Operator Patch and Canonical Vertex-Audit Protocol | `lane_vii_residual_operator_patch_v1_9_1.tex` | `3cd6245198716910e8a016d8ff07cc0fff25dfdbdeea0c63570efa60d20c49b3` | `lane_vii_residual_operator_patch_v1_9_1.pdf` | `927bb81e3a07238b275f5f35f0f906702ddf117b147ebefcbc4f8602b761e91f` | Exported locally; corrective patch replacing scalar residual with typed residual operator and defining v1.10 vertex-formula extraction target. |
 
+## Source-captured artifacts not yet exported
+
+| Version | Title / role | Repository source | Status |
+| --- | --- | --- | --- |
+| v2.0.1-FRI | Polish Patch Before Rank-5 Stress Test | `manuscripts/lane-vii-holographic-invariants/v2.0.1/source.md` | Source captured; not yet exported as PDF. Consolidation precision patch and protocol update before v1.14. |
+
 ## Chat-draft tranches not yet exported
 
 | Version | Title / role | Status | Core result |
@@ -29,6 +35,10 @@ Markdown/LaTeX source is canonical. PDFs are distribution artifacts. Binary PDFs
 | v1.7.1-FRI | Residual Threshold Correction and Spin-Weighted Defect Ledger | Chat draft, not yet exported | Corrected residual threshold to `log_2(2/5^{1/3}) = 0.226024...`, added spin-weighted defect condition, and specified canonical decomposition algorithm. |
 | v1.8-FRI | First Residual Loop Computation | Chat draft, not yet exported | Audited elementary TL loops, theta/bubble identities, and 9j loops as non-residual under normalized Wigner/TL form. |
 | v1.9-FRI | Connected Residual Evaluation Search | Chat draft, not yet exported | Reduced catalogue ambiguity but over-scalarized the residual object; patched by v1.9.1. |
+| v1.10.1-FRI | Local Vertex Formula Identification and Normalized Package Protocol | Exported locally but not yet in manifest hash table | Identifies Cherrington-Christensen 48j vertex package and normalizes the vertex-edge protocol. |
+| v1.11-FRI | Normalized 48j Vertex Package Definition and Sign/Path Discipline | Chat draft, not yet exported | Transcribes vertex/edge formula structure, fixes sign/path rules, defines normalized package for computation. |
+| v1.12-FRI | Smallest-Case Residual Block Norm Audit I | Chat draft, not yet exported | Shows planar four-plaquette smallest case is defect-free but degenerate. |
+| v1.13-FRI | Two-Plane Fundamental Vertex Stress Test | Chat draft, not yet exported | Shows boundary-cut rank-2 channel is operator-safe; closed rank-2 cycle saturates Frobenius; local-to-global consistency at rank 2. |
 
 These chat-draft tranches should be exported or folded into the next consolidation artifact before external circulation.
 
@@ -57,7 +67,9 @@ The artifact chain establishes:
 7. normalized Racah F-move and dimension-weighted 9j recoupling unitarity in chat-draft form;
 8. residual threshold/spin-weighted ledger and canonical decomposition protocol;
 9. residual operator patch: the active object is `E_cub^fund` as a typed operator/tensor block, not a scalar;
-10. arbitrary cyclic Frobenius closure as the active theorem target.
+10. rank-2 local audit: operator-safe when cut, Frobenius-tight when closed;
+11. v2.0.1 consolidation-polish source captured before rank-5 stress test;
+12. arbitrary cyclic Frobenius closure as the active theorem target.
 
 ## Missing repository captures
 
@@ -65,7 +77,7 @@ Still to add in later PRs:
 
 - actual TeX sources under `manuscripts/lane-vii-holographic-invariants/` for each exported version;
 - binary PDFs via binary-safe path or Git LFS/release assets;
-- exported sources for v1.3, v1.4, v1.5, v1.7.1, v1.8, and v1.9, or an explicit consolidation absorbing them;
+- exported sources for v1.3, v1.4, v1.5, v1.7.1, v1.8, v1.9, v1.10.1, v1.11, v1.12, and v1.13, or an explicit consolidation absorbing them;
 - Lane IV consolidation artifacts;
 - Brownian Holonomy v0.5 sidecar;
 - Lane VI spherical/simplicial regulator notes;
