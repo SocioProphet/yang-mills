@@ -1,6 +1,6 @@
 # Lane VII Holographic Invariant Program Status
 
-Status: canonical program-status ledger seeded from the Lane VII chat/export sequence.
+Status: canonical program-status ledger updated through Lane VII v1.6-FRI.
 Date: 2026-05-09.
 
 ## Purpose
@@ -31,6 +31,10 @@ Lane VII does claim, at framework level, that the program’s current proof-faci
 | v0.8-FRI | Channel Aggregation and Program Consolidation | Exported PDF/TeX locally; manifest seeded | Formalizes the Channel Aggregation Lemma target and consolidates the closure hierarchy. |
 | v1.0-FRI | Cyclic Channel / Vertex Audit | Exported PDF/TeX locally; manifest seeded | Proves tree-Frobenius aggregation under normalized hypotheses and introduces cyclic trace/cycle-defect obstruction. |
 | v1.2-FRI | Screen Fiber Entropy, Spin-Network Closure, and the Frobenius Aggregation Frontier | Exported PDF/TeX locally; manifest seeded | Consolidates Lane VII as a framework/theorem paper: tree-Frobenius theorem, two-rank-2 cycle test, operator demotion, Frobenius frontier. |
+| v1.3-FRI | Cyclic Channel Frobenius Closure Attempt I | Chat draft; not yet exported | Proves one-cycle Frobenius closure under normalized hypotheses; factorable two-cycle case positive; identifies coupled-cycle vertex norm as obstruction. |
+| v1.4-FRI | Multi-Channel Vertex Normalization Audit | Chat draft; not yet exported | Proves normalized Racah F-move unitarity/contractivity; narrows obstruction to higher-valent Wilson/Reisenberger vertices. |
+| v1.5-FRI | Minimal 9j Vertex Normal-Form Audit | Chat draft; not yet exported | Proves dimension-weighted 9j recoupling matrix is unitary; distinguishes recoupling operators from vertex evaluations. |
+| v1.6-FRI | First Non-Recoupling Vertex Audit | Exported PDF/TeX locally; manifest updated | Crystallizes residual non-recouping trace and loop dimension density as the current obstruction after unitary recoupling normal form. |
 
 ## Formal program object
 
@@ -111,33 +115,33 @@ Program status:
 - Frobenius closure is the primary realistic wall-moving target.
 - Global operator closure is refuted in the cyclic category by the two-rank-2 cycle test, though it may hold in thin/tree-like/sectoral cases.
 
-## Proved partial result
+## Proved and audited partial results
 
-The tree-Frobenius aggregation theorem holds under normalized tree-tensor hypotheses:
+1. **Tree-Frobenius aggregation.** Under normalized tree-tensor hypotheses,
 
-```tex
-|Contr(G)| <= C_partial \prod_e sqrt(rank(P_e))
-```
+   ```tex
+   |Contr(G)| <= C_partial \prod_e sqrt(rank(P_e))
+   ```
 
-for finite tree tensor networks whose internal edges carry orthogonal projectors and whose vertex tensors are normalized contractions.
+   for finite tree tensor networks whose internal edges carry orthogonal projectors and whose vertex tensors are normalized contractions.
 
-This is a partial theorem, not a full Yang-Mills result: the normalized vertex hypothesis still must be verified for the exact Wilson/Reisenberger tensor network and cyclic channel graphs remain open.
+2. **Two-rank-2 cyclic test.** The aligned cyclic channel test gives
 
-## First cyclic test
+   ```tex
+   Tr(P U Q V) = 2 = sqrt(2)*sqrt(2)
+   ```
 
-The two-rank-2 cyclic channel test gives
+   which saturates Frobenius scale and refutes a global operator bound of `1` in the cyclic category.
 
-```tex
-Tr(P U Q V) = 2
-```
+3. **One-cycle closure.** Lane VII v1.3 proves Frobenius closure for beta_1=1 channel graphs under normalized hypotheses using spanning tree plus Hilbert-Schmidt Cauchy-Schwarz.
 
-in the aligned rank-2 case. This saturates Frobenius scale
+4. **Factorable two-cycle closure.** Lane VII v1.3 proves the factorable beta_1=2 case under normalized hypotheses.
 
-```tex
-sqrt(2)*sqrt(2)=2
-```
+5. **Racah F-move unitarity.** Lane VII v1.4 proves dimension-weighted Racah F-move recoupling is unitary and hence norm-neutral.
 
-and refutes a global operator bound of `1` in the cyclic category.
+6. **9j recoupling unitarity.** Lane VII v1.5 proves dimension-weighted 9j recoupling matrices are unitary as changes between orthonormal coupling bases.
+
+7. **Non-recouping vertex obstruction.** Lane VII v1.6 identifies residual closed-loop / trace dimension density after unitary decomposition as the current obstruction.
 
 ## Main open theorem
 
@@ -147,7 +151,7 @@ The active open theorem is the Frobenius Closure Theorem for arbitrary cyclic ch
 |Contr(\Gamma)| <= C(\gamma) e^{o(|\Gamma|)} \prod_\ell sqrt(C_{n_\ell/2}).
 ```
 
-Equivalent program target: prove subexponential cycle defect in unitary Temperley-Lieb/Wigner normal form.
+Equivalent current target: prove that residual vertex and cycle defects after unitary recoupling normal form are subexponential in polymer area, or absorb them into a still-improving activity constant.
 
 ## Candidate certificate consequence
 
@@ -170,20 +174,28 @@ This is conditional and not yet a theorem.
 Next research tranche:
 
 ```text
-Lane VII v1.3-FRI: Cyclic Channel Frobenius Closure Attempt
+Lane VII v1.7-FRI: Residual Vertex Defect Density Audit
 ```
 
 Scope:
 
-1. beta_1=1 and beta_1=2 cycle-rank cases first;
-2. spanning tree plus Schatten-Hölder strategy;
-3. explicit boundary-prefactor audit;
-4. verification of unitary Temperley-Lieb/Wigner normal form against the Reisenberger/Wilson amplitude.
+1. identify the first cubic Wilson/Reisenberger vertex that is not purely unitary recoupling after normal-form decomposition;
+2. count residual closed-loop and trace factors after all F/9j recouplings are neutralized;
+3. determine whether residual factors occur sublinearly, linearly with small constant, or at Catalan scale;
+4. classify whether they are KP-subexponential, absorbable into a still-improving Frobenius activity, or route-breaking.
+
+## Progress threshold / fallback boundary
+
+Lane VII remains active while each tranche either proves a new class of closure, narrows the obstruction to a more concrete algebraic object, or produces a quantitative defect bound.
+
+Lane VII should pause and revive narrower Lane II work if two consecutive tranches only rename the obstruction without a new theorem, computation, or defect estimate; or if residual defect density is shown to be Catalan-scale for generic cubic polymers.
+
+See `docs/lane-vii-progress-thresholds.md` for the explicit decision ledger.
 
 ## Relation to other lanes
 
 - Lane I: v0.14.4 remains the theorem-track anchor.
-- Lane II: supplies the cubic polymer behavior and valuation-filtered admissible fibers.
+- Lane II: supplies the cubic polymer behavior and valuation-filtered admissible fibers; remains backup if Lane VII route becomes Catalan-scale or non-KP-compatible.
 - Lane III: supplies obstruction taxonomy and non-claim discipline.
 - Lane IV: supplies preimage/interface discipline.
 - Lane V/Brownian Holonomy: parked diagnostic sidecar; supplies exact-vs-approximate holonomy caution.
