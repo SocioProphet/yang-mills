@@ -18,12 +18,7 @@ Markdown/LaTeX source is canonical. PDFs are distribution artifacts. Binary PDFs
 | v1.2-FRI | Screen Fiber Entropy, Spin-Network Closure, and the Frobenius Aggregation Frontier | `lane_vii_screen_fiber_spin_network_frobenius_frontier_v1_2.tex` | `1d9643b97e8de5bd2e017de03a4d5c4f6b7ca492436e16a887c7e280d0a21dcc` | `lane_vii_screen_fiber_spin_network_frobenius_frontier_v1_2.pdf` | `826b197dc8945b16c83adf8c525be3ab0504e4ac72e2130b981bc5ae62eb5956` | Exported locally; framework/theorem consolidation paper. |
 | v1.6-FRI | First Non-Recoupling Vertex Audit | `lane_vii_first_non_recoupling_vertex_audit_v1_6.tex` | `5a01cdf0495f666cd548b7d4a5e9d2499ead13f154e2913309455f58408155a5` | `lane_vii_first_non_recoupling_vertex_audit_v1_6.pdf` | `5be7fbc7468247df174ea4b5f3afcaf0b65fde3962a655403aef0fa2e3bf8652` | Exported locally; recoupling/non-recouping vertex audit and residual trace/loop density obstruction. |
 | v1.9.1-FRI | Residual Operator Patch and Canonical Vertex-Audit Protocol | `lane_vii_residual_operator_patch_v1_9_1.tex` | `3cd6245198716910e8a016d8ff07cc0fff25dfdbdeea0c63570efa60d20c49b3` | `lane_vii_residual_operator_patch_v1_9_1.pdf` | `927bb81e3a07238b275f5f35f0f906702ddf117b147ebefcbc4f8602b761e91f` | Exported locally; corrective patch replacing scalar residual with typed residual operator and defining v1.10 vertex-formula extraction target. |
-
-## Source-captured artifacts not yet exported
-
-| Version | Title / role | Repository source | Status |
-| --- | --- | --- | --- |
-| v2.0.1-FRI | Polish Patch Before Rank-5 Stress Test | `manuscripts/lane-vii-holographic-invariants/v2.0.1/source.md` | Source captured; not yet exported as PDF. Consolidation precision patch and protocol update before v1.14. |
+| v2.0.1-FRI | Screen Fiber Entropy, Spin-Network Closure, and the Local-to-Global Frobenius Frontier | `lane_vii_consolidation_v2_0_1.tex` | `8b37602bbeb64f9616bd995a89c87d2c7a35e29161da7f66c004f181cab951d3` | `lane_vii_consolidation_v2_0_1.pdf` | `f7b19cd3f315fb3b8eea5a6802157d069af020b20db61eb30bc840a7ab77952b` | Exported locally; framework consolidation through rank-5 local audit. Repository also captures Markdown source at `manuscripts/lane-vii-holographic-invariants/v2.0.1/source.md`. |
 
 ## Chat-draft tranches not yet exported
 
@@ -35,12 +30,13 @@ Markdown/LaTeX source is canonical. PDFs are distribution artifacts. Binary PDFs
 | v1.7.1-FRI | Residual Threshold Correction and Spin-Weighted Defect Ledger | Chat draft, not yet exported | Corrected residual threshold to `log_2(2/5^{1/3}) = 0.226024...`, added spin-weighted defect condition, and specified canonical decomposition algorithm. |
 | v1.8-FRI | First Residual Loop Computation | Chat draft, not yet exported | Audited elementary TL loops, theta/bubble identities, and 9j loops as non-residual under normalized Wigner/TL form. |
 | v1.9-FRI | Connected Residual Evaluation Search | Chat draft, not yet exported | Reduced catalogue ambiguity but over-scalarized the residual object; patched by v1.9.1. |
-| v1.10.1-FRI | Local Vertex Formula Identification and Normalized Package Protocol | Exported locally but not yet in manifest hash table | Identifies Cherrington-Christensen 48j vertex package and normalizes the vertex-edge protocol. |
+| v1.10.1-FRI | Local Vertex Formula Identification and Normalized Package Protocol | Exported locally but not separately hash-tracked here | Identifies Cherrington-Christensen 48j vertex package and normalizes the vertex-edge protocol. |
 | v1.11-FRI | Normalized 48j Vertex Package Definition and Sign/Path Discipline | Chat draft, not yet exported | Transcribes vertex/edge formula structure, fixes sign/path rules, defines normalized package for computation. |
 | v1.12-FRI | Smallest-Case Residual Block Norm Audit I | Chat draft, not yet exported | Shows planar four-plaquette smallest case is defect-free but degenerate. |
 | v1.13-FRI | Two-Plane Fundamental Vertex Stress Test | Chat draft, not yet exported | Shows boundary-cut rank-2 channel is operator-safe; closed rank-2 cycle saturates Frobenius; local-to-global consistency at rank 2. |
+| v1.14-FRI | Three-Plane Rank-5 Vertex Stress Test | Chat draft, folded into v2.0.1 | Shows boundary-cut rank-5 channel is operator-safe; closed rank-5 cycle saturates Frobenius; all single-edge fundamental ranks are locally audited. |
 
-These chat-draft tranches should be exported or folded into the next consolidation artifact before external circulation.
+These chat-draft tranches should be exported individually or treated as absorbed into v2.0.1 before external circulation.
 
 ## Claim boundary for all artifacts
 
@@ -67,9 +63,9 @@ The artifact chain establishes:
 7. normalized Racah F-move and dimension-weighted 9j recoupling unitarity in chat-draft form;
 8. residual threshold/spin-weighted ledger and canonical decomposition protocol;
 9. residual operator patch: the active object is `E_cub^fund` as a typed operator/tensor block, not a scalar;
-10. rank-2 local audit: operator-safe when cut, Frobenius-tight when closed;
-11. v2.0.1 consolidation-polish source captured before rank-5 stress test;
-12. arbitrary cyclic Frobenius closure as the active theorem target.
+10. local single-edge audits at ranks C1=1, C2=2, C3=5 agree with Frobenius mainline;
+11. v2.0.1 consolidation captures the local-to-global Frobenius frontier through rank 5;
+12. arbitrary cyclic Frobenius closure remains the active theorem target.
 
 ## Missing repository captures
 
