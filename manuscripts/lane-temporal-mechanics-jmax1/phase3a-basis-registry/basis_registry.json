@@ -1,0 +1,31 @@
+{
+  "artifact": "Phase 3a Jmax=1 basis registry",
+  "cutoff": {
+    "Jmax": 1,
+    "L": 2,
+    "dimension": 14
+  },
+  "label_convention": "integer labels n=2j, m=2k, ell=0..min(n,m); basis label Phi_{n m ell}",
+  "dimension_formula": "dim H_phys(Jmax) = sum_{n=0}^{L} sum_{m=0}^{L} (min(n,m)+1) = (L+1)(L+2)(2L+3)/6 with L=2Jmax",
+  "ordering": "total-grade ordering chosen to preserve the Jmax=1/2 fixture order as a truncation subset",
+  "basis": [
+    {"index":0,"label":"Phi_000","n":0,"m":0,"ell":0,"j":0,"k":0,"sector_tags":["vacuum","scalar_even","jhalf_fixture"],"plaquette_swap":{"target_label":"Phi_000","target_index":0,"type":"fixed"},"is_jhalf_truncation":true,"is_new_at_jmax1":false},
+    {"index":1,"label":"Phi_100","n":1,"m":0,"ell":0,"j":0.5,"k":0,"sector_tags":["scalar_even","jhalf_fixture","p_only"],"plaquette_swap":{"target_label":"Phi_010","target_index":2,"type":"pair"},"is_jhalf_truncation":true,"is_new_at_jmax1":false},
+    {"index":2,"label":"Phi_010","n":0,"m":1,"ell":0,"j":0,"k":0.5,"sector_tags":["scalar_even","jhalf_fixture","q_only"],"plaquette_swap":{"target_label":"Phi_100","target_index":1,"type":"pair"},"is_jhalf_truncation":true,"is_new_at_jmax1":false},
+    {"index":3,"label":"Phi_200","n":2,"m":0,"ell":0,"j":1,"k":0,"sector_tags":["scalar_even","new_jmax1","p_only"],"plaquette_swap":{"target_label":"Phi_020","target_index":6,"type":"pair"},"is_jhalf_truncation":false,"is_new_at_jmax1":true},
+    {"index":4,"label":"Phi_110","n":1,"m":1,"ell":0,"j":0.5,"k":0.5,"sector_tags":["scalar_even","jhalf_fixture","mixed_two_plaquette"],"plaquette_swap":{"target_label":"Phi_110","target_index":4,"type":"fixed"},"is_jhalf_truncation":true,"is_new_at_jmax1":false},
+    {"index":5,"label":"Phi_111","n":1,"m":1,"ell":1,"j":0.5,"k":0.5,"sector_tags":["relative_orientation_vector","non_scalar_relative","jhalf_fixture","mixed_two_plaquette"],"plaquette_swap":{"target_label":"Phi_111","target_index":5,"type":"fixed"},"is_jhalf_truncation":true,"is_new_at_jmax1":false},
+    {"index":6,"label":"Phi_020","n":0,"m":2,"ell":0,"j":0,"k":1,"sector_tags":["scalar_even","new_jmax1","q_only"],"plaquette_swap":{"target_label":"Phi_200","target_index":3,"type":"pair"},"is_jhalf_truncation":false,"is_new_at_jmax1":true},
+    {"index":7,"label":"Phi_210","n":2,"m":1,"ell":0,"j":1,"k":0.5,"sector_tags":["scalar_even","new_jmax1","mixed_two_plaquette"],"plaquette_swap":{"target_label":"Phi_120","target_index":9,"type":"pair"},"is_jhalf_truncation":false,"is_new_at_jmax1":true},
+    {"index":8,"label":"Phi_211","n":2,"m":1,"ell":1,"j":1,"k":0.5,"sector_tags":["relative_orientation_vector","non_scalar_relative","new_jmax1","mixed_two_plaquette"],"plaquette_swap":{"target_label":"Phi_121","target_index":10,"type":"pair"},"is_jhalf_truncation":false,"is_new_at_jmax1":true},
+    {"index":9,"label":"Phi_120","n":1,"m":2,"ell":0,"j":0.5,"k":1,"sector_tags":["scalar_even","new_jmax1","mixed_two_plaquette"],"plaquette_swap":{"target_label":"Phi_210","target_index":7,"type":"pair"},"is_jhalf_truncation":false,"is_new_at_jmax1":true},
+    {"index":10,"label":"Phi_121","n":1,"m":2,"ell":1,"j":0.5,"k":1,"sector_tags":["relative_orientation_vector","non_scalar_relative","new_jmax1","mixed_two_plaquette"],"plaquette_swap":{"target_label":"Phi_211","target_index":8,"type":"pair"},"is_jhalf_truncation":false,"is_new_at_jmax1":true},
+    {"index":11,"label":"Phi_220","n":2,"m":2,"ell":0,"j":1,"k":1,"sector_tags":["scalar_even","new_jmax1","mixed_two_plaquette"],"plaquette_swap":{"target_label":"Phi_220","target_index":11,"type":"fixed"},"is_jhalf_truncation":false,"is_new_at_jmax1":true},
+    {"index":12,"label":"Phi_221","n":2,"m":2,"ell":1,"j":1,"k":1,"sector_tags":["relative_orientation_vector","non_scalar_relative","new_jmax1","mixed_two_plaquette"],"plaquette_swap":{"target_label":"Phi_221","target_index":12,"type":"fixed"},"is_jhalf_truncation":false,"is_new_at_jmax1":true},
+    {"index":13,"label":"Phi_222","n":2,"m":2,"ell":2,"j":1,"k":1,"sector_tags":["relative_orientation_rank2","new_jmax1_tensor","non_scalar_relative","new_jmax1","mixed_two_plaquette"],"plaquette_swap":{"target_label":"Phi_222","target_index":13,"type":"fixed"},"is_jhalf_truncation":false,"is_new_at_jmax1":true}
+  ],
+  "jhalf_truncation_indices": [0,1,2,4,5],
+  "jhalf_truncation_labels": ["Phi_000","Phi_100","Phi_010","Phi_110","Phi_111"],
+  "new_jmax1_labels": ["Phi_200","Phi_020","Phi_210","Phi_211","Phi_120","Phi_121","Phi_220","Phi_221","Phi_222"],
+  "claim_boundary": ["basis registry only","no Gram matrix","no transfer matrix","no spectrum","no beta trend or physical mass interpretation"]
+}
