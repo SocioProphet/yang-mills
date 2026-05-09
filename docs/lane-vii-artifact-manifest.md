@@ -1,6 +1,6 @@
 # Lane VII Artifact Manifest
 
-Status: export manifest seeded from local Lane VII PDF/TeX builds.
+Status: export manifest seeded from local Lane VII PDF/TeX builds and chat-draft tranche ledger.
 Date: 2026-05-09.
 
 ## Policy
@@ -16,6 +16,17 @@ Markdown/LaTeX source is canonical. PDFs are distribution artifacts. The current
 | v0.8-FRI | Channel Aggregation and Program Consolidation | `lane_vii_channel_aggregation_and_program_consolidation_v0_8.tex` | `d6f6d549df3dc27a9cdc147f5abfb67656afeeacb670f556871a0985ddb78805` | `lane_vii_channel_aggregation_and_program_consolidation_v0_8.pdf` | `fbf2b51883836239ca0f465b75f3da0bb88ff327d816932db619ee3758e4dfdb` | Exported locally; Channel Aggregation Lemma target. |
 | v1.0-FRI | Cyclic Channel Defects, Normalized Vertex Audit, and Program Consolidation | `lane_vii_cyclic_channel_vertex_audit_v1_0.tex` | `3a3ee8526dabba5e02e3afdcfcbdc8523165dafe3b75ff4840ce70b0984d1037` | `lane_vii_cyclic_channel_vertex_audit_v1_0.pdf` | `ec2adc9073d4e30916ec15425feed6634d16008f73f88f05f660cd1043ee3de0` | Exported locally; tree theorem + cycle-defect target. |
 | v1.2-FRI | Screen Fiber Entropy, Spin-Network Closure, and the Frobenius Aggregation Frontier | `lane_vii_screen_fiber_spin_network_frobenius_frontier_v1_2.tex` | `1d9643b97e8de5bd2e017de03a4d5c4f6b7ca492436e16a887c7e280d0a21dcc` | `lane_vii_screen_fiber_spin_network_frobenius_frontier_v1_2.pdf` | `826b197dc8945b16c83adf8c525be3ab0504e4ac72e2130b981bc5ae62eb5956` | Exported locally; framework/theorem consolidation paper. |
+| v1.6-FRI | First Non-Recoupling Vertex Audit | `lane_vii_first_non_recoupling_vertex_audit_v1_6.tex` | `5a01cdf0495f666cd548b7d4a5e9d2499ead13f154e2913309455f58408155a5` | `lane_vii_first_non_recoupling_vertex_audit_v1_6.pdf` | `5be7fbc7468247df174ea4b5f3afcaf0b65fde3962a655403aef0fa2e3bf8652` | Exported locally; recoupling/non-recouping vertex audit and residual trace/loop density obstruction. |
+
+## Chat-draft tranches not yet exported
+
+| Version | Title / role | Status | Core result |
+| --- | --- | --- | --- |
+| v1.3-FRI | Cyclic Channel Frobenius Closure Attempt I | Chat draft, not yet exported | Proved one-cycle Frobenius closure under normalized hypotheses; factorable two-cycle case positive; coupled-cycle vertex norm identified as obstruction. |
+| v1.4-FRI | Multi-Channel Vertex Normalization Audit | Chat draft, not yet exported | Proved normalized Racah F-move unitarity/contractivity; reduced obstruction to higher-valent Wilson/Reisenberger vertices. |
+| v1.5-FRI | Minimal 9j Vertex Normal-Form Audit | Chat draft, not yet exported | Proved dimension-weighted 9j recoupling matrix is unitary; distinguished recoupling operators from vertex evaluations. |
+
+These chat-draft tranches should be exported or folded into the next consolidation artifact before external circulation.
 
 ## Claim boundary for all artifacts
 
@@ -38,7 +49,10 @@ The artifact chain establishes:
 3. screen-transfer architecture and closure hierarchy;
 4. tree-Frobenius aggregation theorem under normalized hypotheses;
 5. two-rank-2 cycle test that saturates Frobenius and demotes global operator closure;
-6. arbitrary cyclic Frobenius closure as the active theorem target.
+6. one-cycle and factorable two-cycle Frobenius closure in chat-draft form;
+7. normalized Racah F-move and dimension-weighted 9j recoupling unitarity in chat-draft form;
+8. residual non-recouping trace/loop density as the current obstruction after v1.6;
+9. arbitrary cyclic Frobenius closure as the active theorem target.
 
 ## Missing repository captures
 
@@ -46,6 +60,7 @@ Still to add in later PRs:
 
 - actual TeX sources under `manuscripts/lane-vii-holographic-invariants/` for each exported version;
 - binary PDFs via binary-safe path or Git LFS/release assets;
+- exported sources for v1.3, v1.4, and v1.5, or an explicit consolidation absorbing them;
 - Lane IV consolidation artifacts;
 - Brownian Holonomy v0.5 sidecar;
 - Lane VI spherical/simplicial regulator notes;
