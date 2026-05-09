@@ -1,0 +1,254 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{longtable}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{target}{Target}
+
+\newmdenv[
+  linewidth=0.6pt,
+  roundcorner=4pt,
+  backgroundcolor=gray!5,
+  skipabove=10pt,
+  skipbelow=10pt,
+  innertopmargin=8pt,
+  innerbottommargin=8pt,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt
+]{claimbox}
+
+\title{Lane VII Holographic Invariant Memorandum v1.9.1-FRI\\
+\large Residual Operator Patch and Canonical Vertex-Audit Protocol}
+\author{Michael D. Heller\\SocioProphet Research}
+\date{Working draft v1.9.1-FRI. May 2026.}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Lane VII v1.9 reduced the cyclic Frobenius-closure obstruction to a residual local object denoted $E_{\mathrm{cub}}^{\mathrm{fund}}$. This corrective tranche patches that notation and claim boundary. The residual need not be a scalar; before the actual Wilson/Reisenberger local vertex is written and reduced, the correct object is a residual operator or tensor block
+\[
+  \mathcal E_{\mathrm{cub}}^{\mathrm{fund}}:H_{\mathrm{in}}\to H_{\mathrm{out}},
+\]
+with defect size measured by an explicitly chosen norm, provisionally the operator norm. The catalogue-completeness statement is also demoted from conclusion to hypothesis until the finite fundamental local catalogue is enumerated. This note fixes the canonical decomposition convention, states the residual log-density test, preserves the exact residual threshold
+\[
+  \log(2/5^{1/3}),
+\]
+and defines the next concrete tranche: extract the actual normalized fundamental four-dimensional hypercubic dual vertex and classify every factor as recoupling, orthogonality, ledgered loop, vacuum denominator, or connected residual evaluation.
+\end{abstract}
+
+\section{Decision and correction}
+
+Lane VII v1.9 was directionally correct but too confident in one place. It described the residual obstruction as a scalar
+\[
+  E_{\mathrm{cub}}^{\mathrm{fund}}.
+\]
+That scalar notation is premature. The local Wilson/Reisenberger vertex may leave a residual tensor block between channel spaces rather than a scalar.
+
+The corrected object is
+\[
+  \mathcal E_{\mathrm{cub}}^{\mathrm{fund}}:H_{\mathrm{in}}\to H_{\mathrm{out}},
+\]
+with residual size measured by
+\[
+  \lambda_{\mathrm{cub}}=\|\mathcal E_{\mathrm{cub}}^{\mathrm{fund}}\|_{\mathrm{op}},
+\]
+unless a different norm is explicitly justified.
+
+\begin{claimbox}
+\textbf{v1.9.1 correction.} Replace scalar residual evaluation claims by typed residual-operator claims. The next proof-facing task is not ``compute $E$'' but: extract the actual fundamental four-dimensional dual vertex, reduce it by the canonical normal-form algorithm, and compute the norm of any residual operator left after ledger allocation.
+\end{claimbox}
+
+\section{What remains valid from v1.9}
+
+The following v1.9 elements remain valid.
+
+\begin{enumerate}[leftmargin=1.25cm]
+  \item The residual log-density is the right KP-facing object:
+  \[
+    \Lambda_{\mathrm{res}}(\Gamma)=\frac{1}{|\Gamma|}\sum_v\log\lambda_v.
+  \]
+  \item The exact fundamental replacement threshold is
+  \[
+    \rho_{1/2}^{\mathrm{crit}}
+    =\log_2\left(\frac{2}{5^{1/3}}\right)
+    =0.226024\ldots.
+  \]
+  \item The spin-weighted residual condition is
+  \[
+    \sum_j \rho_j\log(2j+1)<\log\left(\frac{2}{5^{1/3}}\right).
+  \]
+  \item The R/O/L/V/E factor taxonomy remains useful.
+\end{enumerate}
+
+The issue is not the threshold. The issue is typing and catalogue completeness.
+
+\section{Residual objects must be typed}
+
+\begin{definition}[Residual operator]
+Let $\mathcal V_{\mathrm{cub}}^{\mathrm{fund}}$ be a local fundamental cubic Wilson/Reisenberger vertex amplitude after all canonical reductions that are known to be unitary, orthogonality-based, or ledgered. The residual object is the remaining connected non-ledgered block
+\[
+  \mathcal E_{\mathrm{cub}}^{\mathrm{fund}}:H_{\mathrm{in}}\to H_{\mathrm{out}},
+\]
+where $H_{\mathrm{in}}$ and $H_{\mathrm{out}}$ are tensor products of remaining channel Hilbert spaces.
+\end{definition}
+
+\begin{definition}[Residual size]
+The provisional residual size is
+\[
+  \lambda_{\mathrm{cub}}=\|\mathcal E_{\mathrm{cub}}^{\mathrm{fund}}\|_{\mathrm{op}}.
+\]
+A Schatten or Hilbert--Schmidt norm may be used only if the proof explicitly shows that this is the norm exposed by the global contraction.
+\end{definition}
+
+This prevents premature scalarization. If the residual block is a matrix, tensor, or channel operator, treating it as a scalar can hide channel aggregation.
+
+\section{Catalogue completeness is a hypothesis, not yet a conclusion}
+
+v1.9 called the local catalogue complete. This should be weakened.
+
+\begin{definition}[Fundamental local catalogue hypothesis]
+The fundamental local catalogue hypothesis says that the local four-dimensional hypercubic dual Wilson/Reisenberger vertex is represented by one finite-template family
+\[
+  \mathcal V_{\mathrm{4D\ cub}}^{\mathrm{fund}}(\boldsymbol\iota),
+\]
+where $\boldsymbol\iota$ ranges over the admissible local fundamental intertwiner assignments, and every local fundamental vertex arising in the cubic Wilson polymer expansion appears as one specialization of this family.
+\end{definition}
+
+This is a hypothesis to verify in the next tranche. The local catalogue may have a single template, but it still has many admissible subcases: active and inactive plaquette labels, orientations, degenerate zero-spin cases, boundary/source insertions, and intertwiner assignments.
+
+\begin{claimbox}
+\textbf{Corrected status.} The catalogue is expected to be finite-template / finitely parameterized. It is not yet fully enumerated. A no-residual result is not complete until the admissible fundamental subcases are enumerated and checked.
+\end{claimbox}
+
+\section{Canonical normal form: convention and path-dependence}
+
+The canonical decomposition algorithm must be treated as a convention until path-independence is proved.
+
+\begin{definition}[Canonical normal-form convention]
+Fix an ordered local basis as follows.
+\begin{enumerate}[leftmargin=1.1cm]
+  \item Order plaquette planes lexicographically:
+  \[
+    (12),(13),(14),(23),(24),(34).
+  \]
+  \item Order incident coordinate directions as
+  \[
+    -e_4,-e_3,-e_2,-e_1,+e_1,+e_2,+e_3,+e_4.
+  \]
+  \item Use left-associated binary coupling trees unless a vertex definition requires an external convention.
+  \item Rewrite all pure recouplings as dimension-weighted Racah $F$-moves or dimension-weighted $9j$ changes of orthonormal basis.
+  \item Use orthogonality to eliminate identity resolutions.
+  \item Allocate face activity, Haar-projector rank, Wilson-boundary factors, and factorized vacuum denominators to their ledgers.
+  \item Count as residual only a connected block that survives all prior steps.
+\end{enumerate}
+\end{definition}
+
+This does not yet prove that all valid decomposition paths give the same residual. It creates a canonical convention. Later work may replace the convention with a confluence theorem or a minimization definition.
+
+\section{Vacuum cancellation must be limited}
+
+Disconnected vacuum bubbles cancel in normalized expectations. Connected vacuum-like subgraphs attached to the Wilson-screen fiber do not automatically cancel.
+
+Therefore the rule is:
+\[
+  \text{factorized vacuum component}\Rightarrow\text{denominator ledger, non-residual},
+\]
+while
+\[
+  \text{connected vacuum-like subgraph}\Rightarrow\text{candidate residual unless otherwise reduced}.
+\]
+
+This is important for the next local vertex audit. A bubble is not harmless merely because it looks vacuum-like; it must be disconnected or explicitly canceled.
+
+\section{Residual density test}
+
+For a polymer $\Gamma$, let the residual blocks have norms $\lambda_v$. Define
+\[
+  \Lambda_{\mathrm{res}}(\Gamma)=\frac{1}{|\Gamma|}\sum_{v}\log\lambda_v.
+\]
+The Frobenius route survives if
+\[
+  \limsup_{|\Gamma|\to\infty}\Lambda_{\mathrm{res}}(\Gamma)<\log\left(\frac{2}{5^{1/3}}\right).
+\]
+Numerically,
+\[
+  \log\left(\frac{2}{5^{1/3}}\right)=0.15667\ldots.
+\]
+For fundamental residual loops only, this is equivalent to
+\[
+  \rho_{1/2}<0.226024\ldots.
+\]
+
+The operator formulation is more general than loop counting. It handles scalar loops, higher-spin residual loops, and matrix-valued residual blocks.
+
+\section{Patched v1.10 target}
+
+The next tranche must begin with the actual local formula.
+
+\begin{target}[v1.10: Local vertex formula extraction]
+Extract the normalized fundamental four-dimensional hypercubic dual vertex formula and apply the canonical normal-form convention.
+\end{target}
+
+Required tasks:
+\begin{enumerate}[leftmargin=1.25cm]
+  \item Write the local vertex amplitude $\mathcal V_{\mathrm{4D\ cub}}^{\mathrm{fund}}(\boldsymbol\iota)$ explicitly.
+  \item Enumerate admissible local fundamental intertwiner assignments.
+  \item Apply the canonical normal-form convention.
+  \item Classify every factor as R/O/L/V/E:
+  \begin{itemize}
+    \item R: recoupling unitary;
+    \item O: orthogonality / identity resolution;
+    \item L: ledgered loop;
+    \item V: factorized vacuum denominator;
+    \item E: connected residual operator/evaluation.
+  \end{itemize}
+  \item If E appears, compute $\lambda_v=\|\mathcal E_v\|$.
+  \item Compare the resulting log-density to $\log(2/5^{1/3})$.
+\end{enumerate}
+
+\section{Non-claim box}
+
+This note does not claim:
+\begin{itemize}
+  \item that the fundamental local catalogue is fully enumerated;
+  \item that the residual object is scalar;
+  \item that $D_{\mathrm{vert}}=1$;
+  \item that residual density is subcritical;
+  \item that Frobenius closure is proved;
+  \item that KP insertion is valid;
+  \item that the v0.14.4 wall has moved;
+  \item that v0.14.4 has been extended;
+  \item that continuum Yang--Mills follows;
+  \item that there is any Clay-level implication.
+\end{itemize}
+
+The positive claims are:
+\begin{itemize}
+  \item v1.9's scalar residual should be replaced by a typed residual operator;
+  \item catalogue completeness is a hypothesis requiring enumeration;
+  \item the canonical decomposition is a fixed convention until path-independence is proved;
+  \item only factorized vacuum components cancel automatically;
+  \item v1.10 must extract the actual local fundamental four-dimensional dual vertex formula before making residual-density claims.
+\end{itemize}
+
+\section{Verdict}
+
+v1.9 remains useful but must be patched before becoming canonical. The corrected active target is:
+\[
+  \boxed{\text{Extract the actual fundamental 4D dual vertex and compute the norm of its residual operator after canonical normal-form reduction.}}
+\]
+This is the next tranche.
+
+\end{document}
