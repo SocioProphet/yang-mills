@@ -1,6 +1,6 @@
 # Lane VII Holographic Invariant Program Status
 
-Status: canonical program-status ledger updated through Lane VII v1.6-FRI.
+Status: canonical program-status ledger updated through Lane VII v1.9.1-FRI.
 Date: 2026-05-09.
 
 ## Purpose
@@ -20,7 +20,7 @@ Lane VII does not claim:
 - proof of Frobenius closure for arbitrary cyclic channel graphs;
 - proof that the KP certificate can yet be rerun with a hybrid Frobenius activity.
 
-Lane VII does claim, at framework level, that the program’s current proof-facing object is a screen-fiber entropy / spin-network closure problem.
+Lane VII does claim, at framework level, that the program's current proof-facing object is a screen-fiber entropy / spin-network closure problem.
 
 ## Current Lane VII artifact chain
 
@@ -35,6 +35,10 @@ Lane VII does claim, at framework level, that the program’s current proof-faci
 | v1.4-FRI | Multi-Channel Vertex Normalization Audit | Chat draft; not yet exported | Proves normalized Racah F-move unitarity/contractivity; narrows obstruction to higher-valent Wilson/Reisenberger vertices. |
 | v1.5-FRI | Minimal 9j Vertex Normal-Form Audit | Chat draft; not yet exported | Proves dimension-weighted 9j recoupling matrix is unitary; distinguishes recoupling operators from vertex evaluations. |
 | v1.6-FRI | First Non-Recoupling Vertex Audit | Exported PDF/TeX locally; manifest updated | Crystallizes residual non-recouping trace and loop dimension density as the current obstruction after unitary recoupling normal form. |
+| v1.7.1-FRI | Residual Threshold Correction and Spin-Weighted Defect Ledger | Chat draft; not yet exported | Corrects the residual threshold to `log_2(2/5^{1/3}) = 0.226024...`, adds spin-weighted defect condition, and specifies canonical decomposition algorithm. |
+| v1.8-FRI | First Residual Loop Computation | Chat draft; not yet exported | Audits elementary TL loops, theta/bubble identities, and 9j decomposition loops as non-residual under normalized Wigner/TL form. |
+| v1.9-FRI | Connected Residual Evaluation Search | Chat draft; not yet exported | Reduces catalogue ambiguity but over-scalarizes the residual object; superseded by v1.9.1 patch. |
+| v1.9.1-FRI | Residual Operator Patch and Canonical Vertex-Audit Protocol | Exported PDF/TeX locally; manifest updated | Replaces scalar residual notation with typed residual-operator notation and demotes catalogue completeness to a hypothesis pending local vertex enumeration. |
 
 ## Formal program object
 
@@ -143,6 +147,12 @@ Program status:
 
 7. **Non-recouping vertex obstruction.** Lane VII v1.6 identifies residual closed-loop / trace dimension density after unitary decomposition as the current obstruction.
 
+8. **Residual threshold and ledger.** Lane VII v1.7.1 sets the exact fundamental threshold at `0.226024...` and the spin-weighted condition `sum_j rho_j log(2j+1) < log(2/5^{1/3})`.
+
+9. **First residual-loop audit.** Lane VII v1.8 classifies elementary TL loops, theta/bubble identities, and 9j decomposition loops as non-residual under normalized Wigner/TL form.
+
+10. **Residual operator correction.** Lane VII v1.9.1 replaces the scalar residual with a typed residual operator/tensor block `E_cub^fund : H_in -> H_out` and makes catalogue completeness a hypothesis pending enumeration.
+
 ## Main open theorem
 
 The active open theorem is the Frobenius Closure Theorem for arbitrary cyclic channel graphs:
@@ -153,9 +163,34 @@ The active open theorem is the Frobenius Closure Theorem for arbitrary cyclic ch
 
 Equivalent current target: prove that residual vertex and cycle defects after unitary recoupling normal form are subexponential in polymer area, or absorb them into a still-improving activity constant.
 
+## Residual-defect condition
+
+The candidate Frobenius wall is now conditional not only on Frobenius closure and KP insertion but also on residual defect control.
+
+The exact spin-weighted residual condition is:
+
+```tex
+\sum_j \rho_j \log(2j+1) < \log(2/5^{1/3}).
+```
+
+For fundamental residual loops only this becomes:
+
+```text
+rho_{1/2} < log_2(2/5^{1/3}) ~= 0.226024
+```
+
+The active residual object is a typed operator/tensor block, not necessarily a scalar:
+
+```tex
+\mathcal E_{cub}^{fund}: H_{in} \to H_{out},
+\lambda_{cub}=||\mathcal E_{cub}^{fund}||_{op}
+```
+
+unless a different norm is explicitly justified.
+
 ## Candidate certificate consequence
 
-If Frobenius closure is proved globally and KP insertion is valid, the candidate hybrid activity is
+If Frobenius closure is proved globally, residual defect is subcritical, and KP insertion is valid, the candidate hybrid activity is
 
 ```tex
 Q_hyb^Frob(beta) = Q(beta) - 4 r_{1/2}(beta) + 2 r_{1/2}(beta) 5^{1/3}.
@@ -174,21 +209,23 @@ This is conditional and not yet a theorem.
 Next research tranche:
 
 ```text
-Lane VII v1.7-FRI: Residual Vertex Defect Density Audit
+Lane VII v1.10-FRI: Local Vertex Formula Extraction
 ```
 
 Scope:
 
-1. identify the first cubic Wilson/Reisenberger vertex that is not purely unitary recoupling after normal-form decomposition;
-2. count residual closed-loop and trace factors after all F/9j recouplings are neutralized;
-3. determine whether residual factors occur sublinearly, linearly with small constant, or at Catalan scale;
-4. classify whether they are KP-subexponential, absorbable into a still-improving Frobenius activity, or route-breaking.
+1. write the actual normalized fundamental 4D hypercubic dual vertex formula;
+2. enumerate admissible local fundamental intertwiner assignments;
+3. apply the canonical normal-form convention;
+4. classify every factor as recoupling, orthogonality, ledgered loop, factorized vacuum denominator, or connected residual operator/evaluation;
+5. compute the norm of any connected residual operator;
+6. compare the resulting residual log-density to `log(2/5^{1/3})`.
 
 ## Progress threshold / fallback boundary
 
 Lane VII remains active while each tranche either proves a new class of closure, narrows the obstruction to a more concrete algebraic object, or produces a quantitative defect bound.
 
-Lane VII should pause and revive narrower Lane II work if two consecutive tranches only rename the obstruction without a new theorem, computation, or defect estimate; or if residual defect density is shown to be Catalan-scale for generic cubic polymers.
+Lane VII should pause and revive narrower Lane II work if two consecutive Lane VII tranches only rename the obstruction without a new theorem, computation, or defect estimate; or if residual defect density is shown to be Catalan-scale for generic cubic polymers.
 
 See `docs/lane-vii-progress-thresholds.md` for the explicit decision ledger.
 
