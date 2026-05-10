@@ -4,7 +4,7 @@ Target repository: `SocioProphet/yang-mills`.
 Source bundle: `yang mills capture bundle 2026 05 09.zip`.
 Source bundle SHA-256: `925f8d6e69d081ee5eea798c0550276fb1fb27982f9611c22743caa59cfb49e1`.
 Source bundle bytes: `8309550`.
-Normalized bundle SHA-256: `5126033e8d17143e69f68f3728daf2c5c7b67119fab7606f59255a084ca4748f`.
+Normalized bundle SHA-256: `4fd1895ed5b603863a40f00f0697e493fa0455e2f13a88cca60a6605938a29a0`.
 Normalized bundle bytes: `8319272`.
 
 ## Storage policy
@@ -54,6 +54,6 @@ Observed outcome: `ALL CHECKS PASS` for Phase 2, Phase 3a, Phase 3b, and Phase 3
 
 ## Current PR expansion status
 
-Committed in this PR: capture README, ingest report, artifact manifest, normalized file index, preserved source-bundle README, Phase 2 status delta, Phase 3a status delta, Phase 3b status delta, Phase 3c status delta, and Methodology Manifesto v0.2 status delta.
+Committed in this PR: capture README, ingest report, artifact manifest, normalized file index, preserved source-bundle README, Phase 2 status delta, Phase 3a status delta, Phase 3b status delta, Phase 3c status delta, Methodology Manifesto v0.2 status delta, and the deterministic ingest script.
 
-Not yet expanded into final repository paths: recovered text extracts, executable scripts, generated JSON fixtures, verification logs, and reconstructed PDFs. These are indexed and hash-registered rather than silently omitted.
+Not yet expanded into final repository paths: recovered text extracts, executable-generated JSON fixtures, verification logs, and reconstructed PDFs. These are indexed and hash-registered rather than silently omitted.
