@@ -1,0 +1,59 @@
+{
+  "artifact": "Phase 3b Jmax=1 Gram matrix",
+  "inner_product": "Haar/Peter-Weyl physical inner product on two plaquette variables after diagonal SU(2) reduction",
+  "basis_source": "manuscripts/lane-temporal-mechanics-jmax1/phase3a-basis-registry/basis_registry.json",
+  "basis_order": [
+    "Phi_000",
+    "Phi_100",
+    "Phi_010",
+    "Phi_200",
+    "Phi_110",
+    "Phi_111",
+    "Phi_020",
+    "Phi_210",
+    "Phi_211",
+    "Phi_120",
+    "Phi_121",
+    "Phi_220",
+    "Phi_221",
+    "Phi_222"
+  ],
+  "dimension": 14,
+  "matrix_type": "identity",
+  "symbolic_statement": "G_{ab} = delta_{ab} under the normalized Peter-Weyl/Wigner basis convention",
+  "matrix": [
+    [1,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,1,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,1,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,1,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,1,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,1,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,1,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,1,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,1,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,1,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,1,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,1,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+  ],
+  "jhalf_regression_indices": [0,1,2,4,5],
+  "jhalf_regression_submatrix": [
+    [1,0,0,0,0],
+    [0,1,0,0,0],
+    [0,0,1,0,0],
+    [0,0,0,1,0],
+    [0,0,0,0,1]
+  ],
+  "max_abs_offdiag": 0,
+  "max_abs_diag_minus_one": 0,
+  "claim_boundary": [
+    "Gram matrix only",
+    "No transfer matrix",
+    "No spectrum",
+    "No beta trend",
+    "No scale proxy",
+    "No physical mass interpretation",
+    "No continuum or Clay claim"
+  ]
+}
