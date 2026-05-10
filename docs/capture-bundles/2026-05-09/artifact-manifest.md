@@ -4,10 +4,12 @@ Target repository: `SocioProphet/yang-mills`.
 Source bundle: `yang mills capture bundle 2026 05 09.zip`.
 Source bundle SHA-256: `925f8d6e69d081ee5eea798c0550276fb1fb27982f9611c22743caa59cfb49e1`.
 Source bundle bytes: `8309550`.
+Normalized bundle SHA-256: `5126033e8d17143e69f68f3728daf2c5c7b67119fab7606f59255a084ca4748f`.
+Normalized bundle bytes: `8319272`.
 
 ## Storage policy
 
-Markdown, text extracts, executable checks, generated JSON fixtures, and verification output logs are canonical review surfaces for this capture. Reconstructed PDFs are distribution artifacts. They are hash-registered here and should be stored through Git LFS, release assets, or a program artifact bucket rather than treated as source of truth.
+Markdown status deltas, capture reports, and file indexes are committed as reviewable repository content in this PR. Reconstructed PDFs are distribution artifacts and are hash-registered for binary-safe storage through Git LFS, release assets, or the program artifact bucket. Recovered text extracts, executable scripts, generated JSON fixtures, and verification logs are indexed here and in `normalized-file-index.md`; they should be expanded into repository paths in a follow-on commit or follow-on PR when connector payload limits allow bulk source expansion.
 
 ## Reconstructed PDF distribution artifacts
 
@@ -23,7 +25,7 @@ Markdown, text extracts, executable checks, generated JSON fixtures, and verific
 | `yang_mills_program_part_three_v3_16_source_scalar_retriage.pdf` | 480697 | `36926cce33c5a965c620bf430daf691c1fac56e995f61dea48d366b834606051` |
 | `yang_mills_program_v4_0_k3_product_formula_face_regression_spectra.pdf` | 578425 | `8dd149bd327d697095850464dc0784c4a9e864ab0c4fdee881f156fbabc52925` |
 
-## Searchable text extracts committed from the same reconstructed sources
+## Recovered text extracts indexed for repository expansion
 
 | Extract | Bytes | SHA-256 |
 |---|---:|---|
@@ -49,3 +51,9 @@ python3 manuscripts/lane-temporal-mechanics-jmax-one/truncation-regression/trunc
 ```
 
 Observed outcome: `ALL CHECKS PASS` for Phase 2, Phase 3a, Phase 3b, and Phase 3c. The reconstructed PDF header audit found 9 of 9 distribution PDFs start with `%PDF`.
+
+## Current PR expansion status
+
+Committed in this PR: capture README, ingest report, artifact manifest, normalized file index, preserved source-bundle README, Phase 2 status delta, Phase 3a status delta, Phase 3b status delta, Phase 3c status delta, and Methodology Manifesto v0.2 status delta.
+
+Not yet expanded into final repository paths: recovered text extracts, executable scripts, generated JSON fixtures, verification logs, and reconstructed PDFs. These are indexed and hash-registered rather than silently omitted.
