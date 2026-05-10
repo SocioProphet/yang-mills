@@ -24,7 +24,7 @@ import pathlib
 import sys
 import zipfile
 
-EXPECTED_ZIP_SHA256 = "5126033e8d17143e69f68f3728daf2c5c7b67119fab7606f59255a084ca4748f"
+EXPECTED_ZIP_SHA256 = "4fd1895ed5b603863a40f00f0697e493fa0455e2f13a88cca60a6605938a29a0"
 EXPECTED_PREFIX = "yang_mills_capture_bundle_2026_05_09/"
 
 SKIP_SUFFIXES = {".pdf"}
