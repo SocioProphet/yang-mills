@@ -30,7 +30,10 @@
         "ym-kp-certificate-boundary",
         "ym-continuum-nonclaim-boundary"
       ],
-      "obstruction_walls": ["certificate_wall", "continuum_reconstruction_wall"]
+      "obstruction_walls": [
+        "certificate_wall",
+        "continuum_reconstruction_wall"
+      ]
     },
     {
       "claim_id": "YM-LANE-III-002-obstruction-taxonomy",
@@ -89,7 +92,11 @@
         "ym-residual-defect-boundary",
         "ym-kp-insertion-boundary"
       ],
-      "obstruction_walls": ["certificate_wall", "shell_map_preservation_wall", "continuum_reconstruction_wall"]
+      "obstruction_walls": [
+        "certificate_wall",
+        "shell_map_preservation_wall",
+        "continuum_reconstruction_wall"
+      ]
     },
     {
       "claim_id": "YM-WP-004-moves-4-1-2-workplan",
@@ -117,32 +124,234 @@
         "ym-open-pr-backlog-boundary",
         "ym-wigner-gates-boundary"
       ],
-      "obstruction_walls": ["certificate_wall", "preimage_wall", "continuum_reconstruction_wall"]
+      "obstruction_walls": [
+        "certificate_wall",
+        "preimage_wall",
+        "continuum_reconstruction_wall"
+      ]
+    },
+    {
+      "claim_id": "HD-SIDECAR-005-finite-representation-audits",
+      "state": "diagnosed",
+      "severity": "E2",
+      "substrate": "Heller-Dirac hydrogenic SO(4) and Dirac-kappa sidecar inside the Yang-Mills research repository",
+      "shell_level": "finite representation audit and sidecar-boundary layer",
+      "projection": "Clebsch-Gordan projector tables, symbolic channel kernels, radial-action defect bookkeeping, and Dirac kappa branch bookkeeping",
+      "statement": "The Heller-Dirac sidecar is a bounded representation-geometric scaffold with repo-local finite audits for Clebsch-Gordan projectors and channel kernels; it is not a Yang-Mills theorem-track promotion, not a continuum mass-gap claim, and not a first-principles quantum-defect or particle-zoo completion claim.",
+      "boundary": [
+        "Sidecar only; no Yang-Mills theorem-track file is promoted by Heller-Dirac material.",
+        "Finite representation audits cover n=2,3,4 Clebsch-Gordan projectors and n=3,4 symbolic channel kernels only.",
+        "Quantum defects remain radial-action/channel phase bookkeeping and are not first-principles empirical predictions.",
+        "Dirac/kappa material is branch and spinor-channel bookkeeping only; it is not a completed quantum-field-theoretic particle taxonomy.",
+        "Any later extraction to a dedicated Heller-Dirac repository must preserve this proof-adapter boundary or replace it with an equivalent SocioSphere adapter."
+      ],
+      "non_claim_refs": [
+        "yang-mills.no-clay-solution",
+        "yang-mills.no-continuum-promotion",
+        "yang-mills.no-heller-dirac-theorem-promotion",
+        "yang-mills.no-heller-dirac-defect-prediction",
+        "yang-mills.no-particle-zoo-completion"
+      ],
+      "owned_gates": [
+        "hd-cg-projector-audit",
+        "hd-channel-kernel-audit",
+        "hd-sidecar-boundary"
+      ],
+      "obstruction_walls": [
+        "certificate_wall",
+        "integer_chern_wall",
+        "preimage_wall"
+      ]
     }
   ],
   "gates": [
-    {"gate_id": "ym-fixed-spacing-source-boundary", "kind": "claim_boundary_check", "status": "planned", "expected": "The v0.14.4 theorem-track claim remains fixed-spacing, SU(2), beta<beta*, and non-continuum."},
-    {"gate_id": "ym-kp-certificate-boundary", "kind": "proof_review", "status": "planned", "expected": "KP certificate status is recorded without implying weak-coupling or continuum control."},
-    {"gate_id": "ym-continuum-nonclaim-boundary", "kind": "non_claim_check", "status": "planned", "expected": "Fixed-spacing evidence is not promoted to continuum construction."},
-    {"gate_id": "ym-obstruction-wall-coverage", "kind": "obstruction_check", "status": "planned", "expected": "Every missing bridge is typed by a declared obstruction wall."},
-    {"gate_id": "ym-no-untyped-bridge", "kind": "obstruction_check", "status": "planned", "expected": "No bridge is left as untyped prose."},
-    {"gate_id": "ym-frobenius-closure-boundary", "kind": "claim_boundary_check", "status": "planned", "expected": "Lane VII Frobenius closure remains conditional until proved for arbitrary cyclic channel graphs."},
-    {"gate_id": "ym-residual-defect-boundary", "kind": "obstruction_check", "status": "planned", "expected": "Residual defect control remains explicit and typed."},
-    {"gate_id": "ym-kp-insertion-boundary", "kind": "proof_review", "status": "planned", "expected": "KP insertion of any hybrid activity remains conditional until proved."},
-    {"gate_id": "ym-workplan-boundary", "kind": "claim_boundary_check", "status": "planned", "expected": "YM-WP-v0.1 remains planning-only and is not theorem-track promotion."},
-    {"gate_id": "ym-open-pr-backlog-boundary", "kind": "claim_boundary_check", "status": "planned", "expected": "Open PRs #22/#23 are tracked as backlog inputs and not treated as merged theorem inputs."},
-    {"gate_id": "ym-wigner-gates-boundary", "kind": "symbolic_check", "status": "planned", "expected": "G1/G2 Wigner-symbol gates remain open until v0.9.21 supplies symbolic 5x5 derivation and Phi_111 selection-rule result."},
-    {"gate_id": "ym-frontier-scaffold", "kind": "test", "status": "planned", "command": "python3 scripts/ym_frontier_scaffold.py", "fixture": "data/yang_mills_frontier/ym_frontier_tranche.json", "expected": "Validates the next-tranche scaffold and emits digest-addressed events without proving closure, moving a wall, or claiming continuum Yang-Mills."}
+    {
+      "gate_id": "ym-fixed-spacing-source-boundary",
+      "kind": "claim_boundary_check",
+      "status": "planned",
+      "expected": "The v0.14.4 theorem-track claim remains fixed-spacing, SU(2), beta<beta*, and non-continuum."
+    },
+    {
+      "gate_id": "ym-kp-certificate-boundary",
+      "kind": "proof_review",
+      "status": "planned",
+      "expected": "KP certificate status is recorded without implying weak-coupling or continuum control."
+    },
+    {
+      "gate_id": "ym-continuum-nonclaim-boundary",
+      "kind": "non_claim_check",
+      "status": "planned",
+      "expected": "Fixed-spacing evidence is not promoted to continuum construction."
+    },
+    {
+      "gate_id": "ym-obstruction-wall-coverage",
+      "kind": "obstruction_check",
+      "status": "planned",
+      "expected": "Every missing bridge is typed by a declared obstruction wall."
+    },
+    {
+      "gate_id": "ym-no-untyped-bridge",
+      "kind": "obstruction_check",
+      "status": "planned",
+      "expected": "No bridge is left as untyped prose."
+    },
+    {
+      "gate_id": "ym-frobenius-closure-boundary",
+      "kind": "claim_boundary_check",
+      "status": "planned",
+      "expected": "Lane VII Frobenius closure remains conditional until proved for arbitrary cyclic channel graphs."
+    },
+    {
+      "gate_id": "ym-residual-defect-boundary",
+      "kind": "obstruction_check",
+      "status": "planned",
+      "expected": "Residual defect control remains explicit and typed."
+    },
+    {
+      "gate_id": "ym-kp-insertion-boundary",
+      "kind": "proof_review",
+      "status": "planned",
+      "expected": "KP insertion of any hybrid activity remains conditional until proved."
+    },
+    {
+      "gate_id": "ym-workplan-boundary",
+      "kind": "claim_boundary_check",
+      "status": "planned",
+      "expected": "YM-WP-v0.1 remains planning-only and is not theorem-track promotion."
+    },
+    {
+      "gate_id": "ym-open-pr-backlog-boundary",
+      "kind": "claim_boundary_check",
+      "status": "planned",
+      "expected": "Open PRs #22/#23 are tracked as backlog inputs and not treated as merged theorem inputs."
+    },
+    {
+      "gate_id": "ym-wigner-gates-boundary",
+      "kind": "symbolic_check",
+      "status": "planned",
+      "expected": "G1/G2 Wigner-symbol gates remain open until v0.9.21 supplies symbolic 5x5 derivation and Phi_111 selection-rule result."
+    },
+    {
+      "gate_id": "ym-frontier-scaffold",
+      "kind": "test",
+      "status": "planned",
+      "command": "python3 scripts/ym_frontier_scaffold.py",
+      "fixture": "data/yang_mills_frontier/ym_frontier_tranche.json",
+      "expected": "Validates the next-tranche scaffold and emits digest-addressed events without proving closure, moving a wall, or claiming continuum Yang-Mills."
+    },
+    {
+      "gate_id": "hd-cg-projector-audit",
+      "kind": "symbolic_check",
+      "status": "planned",
+      "command": "python3 scripts/heller_dirac_cg_audit.py --n 2 3 4",
+      "expected": "Regenerates finite Clebsch-Gordan projector blocks for n=2,3,4 and verifies fixed-M completeness, idempotence, and orthogonality exactly."
+    },
+    {
+      "gate_id": "hd-channel-kernel-audit",
+      "kind": "symbolic_check",
+      "status": "planned",
+      "command": "python3 scripts/heller_dirac_channel_kernels.py --n 3 4",
+      "expected": "Computes n=3,4 symbolic channel kernels and verifies that equal channel shifts collapse every fixed-M product-cell block to a scalar matrix."
+    },
+    {
+      "gate_id": "hd-sidecar-boundary",
+      "kind": "claim_boundary_check",
+      "status": "planned",
+      "expected": "Heller-Dirac remains a bounded sidecar: no Yang-Mills theorem promotion, no continuum mass-gap claim, no empirical quantum-defect prediction, and no completed particle taxonomy."
+    }
   ],
   "non_claims": [
-    {"non_claim_id": "yang-mills.no-clay-solution", "statement": "This adapter does not claim a solution of the Clay Yang-Mills existence and mass gap problem.", "applies_to": ["YM-LANE-I-001-fixed-spacing-strong-coupling-gap", "YM-LANE-III-002-obstruction-taxonomy", "YM-LANE-VII-003-frobenius-frontier", "YM-WP-004-moves-4-1-2-workplan"]},
-    {"non_claim_id": "yang-mills.no-continuum-promotion", "statement": "This adapter does not promote fixed-spacing, finite-cutoff, finite-channel, or planning evidence to a continuum construction.", "applies_to": ["YM-LANE-I-001-fixed-spacing-strong-coupling-gap", "YM-LANE-III-002-obstruction-taxonomy", "YM-LANE-VII-003-frobenius-frontier", "YM-WP-004-moves-4-1-2-workplan"]},
-    {"non_claim_id": "yang-mills.no-untyped-bridge", "statement": "Every missing bridge must remain assigned to an explicit obstruction wall.", "applies_to": ["YM-LANE-III-002-obstruction-taxonomy"]},
-    {"non_claim_id": "yang-mills.no-weak-coupling", "statement": "This adapter does not claim weak-coupling or asymptotic-freedom control.", "applies_to": ["YM-LANE-I-001-fixed-spacing-strong-coupling-gap"]},
-    {"non_claim_id": "yang-mills.no-su-n-generalization", "statement": "This adapter does not generalize the SU(2) fixed-spacing result to SU(N>=3).", "applies_to": ["YM-LANE-I-001-fixed-spacing-strong-coupling-gap"]},
-    {"non_claim_id": "yang-mills.no-frobenius-closure", "statement": "This adapter does not claim arbitrary cyclic Frobenius closure.", "applies_to": ["YM-LANE-VII-003-frobenius-frontier"]},
-    {"non_claim_id": "yang-mills.no-beta-wall-movement", "statement": "The candidate beta_Frob wall is conditional and not a theorem until Frobenius closure, residual defect control, and KP insertion pass controller-witnessed gates.", "applies_to": ["YM-LANE-VII-003-frobenius-frontier"]},
-    {"non_claim_id": "yang-mills.no-workplan-theorem", "statement": "YM-WP-v0.1 is an execution plan only and asserts no new mathematical result.", "applies_to": ["YM-WP-004-moves-4-1-2-workplan"]},
-    {"non_claim_id": "yang-mills.no-wigner-gate-closure-yet", "statement": "This adapter does not mark G1/G2 Wigner-symbol gates closed until v0.9.21 provides the symbolic 5x5 matrix and Phi_111 selection-rule result.", "applies_to": ["YM-WP-004-moves-4-1-2-workplan"]}
+    {
+      "non_claim_id": "yang-mills.no-clay-solution",
+      "statement": "This adapter does not claim a solution of the Clay Yang-Mills existence and mass gap problem.",
+      "applies_to": [
+        "YM-LANE-I-001-fixed-spacing-strong-coupling-gap",
+        "YM-LANE-III-002-obstruction-taxonomy",
+        "YM-LANE-VII-003-frobenius-frontier",
+        "YM-WP-004-moves-4-1-2-workplan",
+        "HD-SIDECAR-005-finite-representation-audits"
+      ]
+    },
+    {
+      "non_claim_id": "yang-mills.no-continuum-promotion",
+      "statement": "This adapter does not promote fixed-spacing, finite-cutoff, finite-channel, sidecar, or planning evidence to a continuum construction.",
+      "applies_to": [
+        "YM-LANE-I-001-fixed-spacing-strong-coupling-gap",
+        "YM-LANE-III-002-obstruction-taxonomy",
+        "YM-LANE-VII-003-frobenius-frontier",
+        "YM-WP-004-moves-4-1-2-workplan",
+        "HD-SIDECAR-005-finite-representation-audits"
+      ]
+    },
+    {
+      "non_claim_id": "yang-mills.no-untyped-bridge",
+      "statement": "Every missing bridge must remain assigned to an explicit obstruction wall.",
+      "applies_to": [
+        "YM-LANE-III-002-obstruction-taxonomy"
+      ]
+    },
+    {
+      "non_claim_id": "yang-mills.no-weak-coupling",
+      "statement": "This adapter does not claim weak-coupling or asymptotic-freedom control.",
+      "applies_to": [
+        "YM-LANE-I-001-fixed-spacing-strong-coupling-gap"
+      ]
+    },
+    {
+      "non_claim_id": "yang-mills.no-su-n-generalization",
+      "statement": "This adapter does not generalize the SU(2) fixed-spacing result to SU(N>=3).",
+      "applies_to": [
+        "YM-LANE-I-001-fixed-spacing-strong-coupling-gap"
+      ]
+    },
+    {
+      "non_claim_id": "yang-mills.no-frobenius-closure",
+      "statement": "This adapter does not claim arbitrary cyclic Frobenius closure.",
+      "applies_to": [
+        "YM-LANE-VII-003-frobenius-frontier"
+      ]
+    },
+    {
+      "non_claim_id": "yang-mills.no-beta-wall-movement",
+      "statement": "The candidate beta_Frob wall is conditional and not a theorem until Frobenius closure, residual defect control, and KP insertion pass controller-witnessed gates.",
+      "applies_to": [
+        "YM-LANE-VII-003-frobenius-frontier"
+      ]
+    },
+    {
+      "non_claim_id": "yang-mills.no-workplan-theorem",
+      "statement": "YM-WP-v0.1 is an execution plan only and asserts no new mathematical result.",
+      "applies_to": [
+        "YM-WP-004-moves-4-1-2-workplan"
+      ]
+    },
+    {
+      "non_claim_id": "yang-mills.no-wigner-gate-closure-yet",
+      "statement": "This adapter does not mark G1/G2 Wigner-symbol gates closed until v0.9.21 provides the symbolic 5x5 matrix and Phi_111 selection-rule result.",
+      "applies_to": [
+        "YM-WP-004-moves-4-1-2-workplan"
+      ]
+    },
+    {
+      "non_claim_id": "yang-mills.no-heller-dirac-theorem-promotion",
+      "statement": "Heller-Dirac sidecar material does not promote any Yang-Mills theorem-track claim, beta wall, continuum construction, or Clay result.",
+      "applies_to": [
+        "HD-SIDECAR-005-finite-representation-audits"
+      ]
+    },
+    {
+      "non_claim_id": "yang-mills.no-heller-dirac-defect-prediction",
+      "statement": "Heller-Dirac quantum-defect material records radial-action and channel-phase bookkeeping only; it does not predict empirical defect constants from first principles.",
+      "applies_to": [
+        "HD-SIDECAR-005-finite-representation-audits"
+      ]
+    },
+    {
+      "non_claim_id": "yang-mills.no-particle-zoo-completion",
+      "statement": "Heller-Dirac Dirac/kappa material records spinor and branch bookkeeping only; it does not claim a completed quantum-field-theoretic particle taxonomy or Standard Model internal-charge classification.",
+      "applies_to": [
+        "HD-SIDECAR-005-finite-representation-audits"
+      ]
+    }
   ]
 }
