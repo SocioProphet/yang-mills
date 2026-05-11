@@ -1,0 +1,54 @@
+name: Yang-Mills frontier validation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'proof-adapter.json'
+      - 'data/yang_mills_frontier/**'
+      - 'docs/workplans/YM-WP-v0.1-draft.md'
+      - 'scripts/ym_frontier_scaffold.py'
+      - '.github/workflows/ym-frontier-validation.yml'
+  pull_request:
+    paths:
+      - 'proof-adapter.json'
+      - 'data/yang_mills_frontier/**'
+      - 'docs/workplans/YM-WP-v0.1-draft.md'
+      - 'scripts/ym_frontier_scaffold.py'
+      - '.github/workflows/ym-frontier-validation.yml'
+
+jobs:
+  ym-frontier-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate JSON files
+        run: |
+          python3 -m json.tool proof-adapter.json >/dev/null
+          python3 -m json.tool data/yang_mills_frontier/ym_frontier_tranche.json >/dev/null
+
+      - name: Run Yang-Mills frontier scaffold
+        run: python3 scripts/ym_frontier_scaffold.py
+
+      - name: Print Yang-Mills frontier artifacts
+        run: |
+          echo '--- ym_frontier_result.md ---'
+          cat reports/yang_mills_frontier/ym_frontier_result.md
+          echo '--- ym_frontier_summary.json ---'
+          cat reports/yang_mills_frontier/ym_frontier_summary.json
+          echo '--- ym_frontier_events.jsonl ---'
+          cat reports/yang_mills_frontier/ym_frontier_events.jsonl
+
+      - name: Upload Yang-Mills frontier artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ym-frontier-validation-artifacts
+          path: reports/yang_mills_frontier/**
+          if-no-files-found: error
