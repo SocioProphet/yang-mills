@@ -1,0 +1,50 @@
+name: Yang-Mills source transfer validation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'docs/source-manifests/YM_SOURCE_MANIFEST.md'
+      - 'data/yang_mills_frontier/ym_source_transfer_manifest.json'
+      - 'scripts/validate_ym_source_transfer_manifest.py'
+      - '.github/workflows/ym-source-transfer-validation.yml'
+  pull_request:
+    paths:
+      - 'docs/source-manifests/YM_SOURCE_MANIFEST.md'
+      - 'data/yang_mills_frontier/ym_source_transfer_manifest.json'
+      - 'scripts/validate_ym_source_transfer_manifest.py'
+      - '.github/workflows/ym-source-transfer-validation.yml'
+
+jobs:
+  ym-source-transfer-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate JSON files
+        run: python3 -m json.tool data/yang_mills_frontier/ym_source_transfer_manifest.json >/dev/null
+
+      - name: Run Yang-Mills source transfer manifest validator
+        run: python3 scripts/validate_ym_source_transfer_manifest.py
+
+      - name: Print Yang-Mills source transfer artifacts
+        run: |
+          echo '--- ym_source_transfer_result.md ---'
+          cat reports/yang_mills_frontier/ym_source_transfer_result.md
+          echo '--- ym_source_transfer_summary.json ---'
+          cat reports/yang_mills_frontier/ym_source_transfer_summary.json
+          echo '--- ym_source_transfer_events.jsonl ---'
+          cat reports/yang_mills_frontier/ym_source_transfer_events.jsonl
+
+      - name: Upload Yang-Mills source transfer artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ym-source-transfer-validation-artifacts
+          path: reports/yang_mills_frontier/ym_source_transfer_*
+          if-no-files-found: error

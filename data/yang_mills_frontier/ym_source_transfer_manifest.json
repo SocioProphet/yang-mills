@@ -1,0 +1,81 @@
+{
+  "schema_version": "ym.source-transfer-manifest.v1",
+  "state": "Move 4 / Move 1 / Move 2 source-transfer payload",
+  "source_upload": {
+    "filename": "YangMillstransfer.zip",
+    "sha256": "e9b6a26391b17858377362a15593e6a44c15fe004a91401c18bb034314e628a1",
+    "size_bytes": 13873735,
+    "file_count": 7
+  },
+  "claim_boundary": [
+    "This transfer manifest records source availability only.",
+    "It does not claim any new Yang-Mills theorem.",
+    "It does not claim continuum construction or Clay Millennium resolution.",
+    "It does not move the v0.14.4 fixed-spacing strong-coupling wall.",
+    "It does not close G1/G2 Wigner gates."
+  ],
+  "load_bearing_roles": {
+    "move_4": [
+      "strong_coupling_lattice_mass_gap_seed_v0_14_4.pdf",
+      "ym_obstruction_survey_v0_18_1.pdf"
+    ],
+    "move_1": [
+      "strong_coupling_lattice_mass_gap_seed_v0_14_4.pdf"
+    ],
+    "move_2": [
+      "heller_yang_mills_temporal_mechanics_whitepaper_v0_9_20_complete_integrated_full_program_paper_expanded.pdf",
+      "heller_yang_mills_temporal_mechanics_whitepaper_v0_9_27_full_running_copy_wigner_gate.pdf",
+      "heller_yang_mills_temporal_mechanics_whitepaper_v0_9_28_full_running_copy_strategy_alignment.pdf"
+    ],
+    "lane_vii_boundary": [
+      "lane_vii_consolidation_v2_0_1.pdf"
+    ],
+    "manifest": [
+      "YM_SOURCE_MANIFEST.md"
+    ]
+  },
+  "files": [
+    {
+      "path": "heller_yang_mills_temporal_mechanics_whitepaper_v0_9_28_full_running_copy_strategy_alignment.pdf",
+      "size_bytes": 4297903,
+      "compressed_size_bytes": 3432464,
+      "sha256": "fb6ab2fe9a1d2cc35fbd9c9c25cc4dfc2074630bb983cec84e60e8eaf251502e"
+    },
+    {
+      "path": "strong_coupling_lattice_mass_gap_seed_v0_14_4.pdf",
+      "size_bytes": 1964693,
+      "compressed_size_bytes": 1725622,
+      "sha256": "8009812b3748eb1897e90558070d03454c1c2ca6c95e699a71d33668c56e6d1f"
+    },
+    {
+      "path": "heller_yang_mills_temporal_mechanics_whitepaper_v0_9_27_full_running_copy_wigner_gate.pdf",
+      "size_bytes": 3728947,
+      "compressed_size_bytes": 2907346,
+      "sha256": "ab5187f6d5b1fec9231d86a28245628b7c93b7e28f8053c64ba3a71533e68e59"
+    },
+    {
+      "path": "lane_vii_consolidation_v2_0_1.pdf",
+      "size_bytes": 1298748,
+      "compressed_size_bytes": 1096539,
+      "sha256": "285bb41d76dc5964343fceaa38c15cd4e800622f9bd69651f7e4e0765fe50612"
+    },
+    {
+      "path": "heller_yang_mills_temporal_mechanics_whitepaper_v0_9_20_complete_integrated_full_program_paper_expanded.pdf",
+      "size_bytes": 2278799,
+      "compressed_size_bytes": 1891322,
+      "sha256": "da827bd67b911378cb8a915585594e2cc12e7c8e2daf9bf4a130afeb606b4bd8"
+    },
+    {
+      "path": "ym_obstruction_survey_v0_18_1.pdf",
+      "size_bytes": 3058454,
+      "compressed_size_bytes": 2815359,
+      "sha256": "64be7390472e754382db0e9713aedb32dc328b2061e68dd3e32d7bcf509bd967"
+    },
+    {
+      "path": "YM_SOURCE_MANIFEST.md",
+      "size_bytes": 8544,
+      "compressed_size_bytes": 3673,
+      "sha256": "2a2294518d4276a04cd23ff0cea85f9fba7035520d1b259f88f153f10d0f9641"
+    }
+  ]
+}
