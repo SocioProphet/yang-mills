@@ -1,0 +1,30 @@
+{
+  "adapter_version": "0.1",
+  "repo": "SocioProphet/yang-mills",
+  "domain": "gauge-theory-mass-gap-obstruction",
+  "controller_protocol": "protocol/proof-apparatus-workspace/v0",
+  "claims": [],
+  "gates": [
+    { "gate_id": "gram-gate", "kind": "symbolic_check", "status": "planned" },
+    { "gate_id": "symmetry-equality", "kind": "symbolic_check", "status": "planned" },
+    { "gate_id": "null-model-control", "kind": "test", "status": "planned" },
+    { "gate_id": "kp-certificate", "kind": "proof_review", "status": "planned" },
+    { "gate_id": "operator-rg", "kind": "obstruction_check", "status": "planned" },
+    { "gate_id": "log-sobolev", "kind": "obstruction_check", "status": "planned" },
+    { "gate_id": "continuum-obstruction", "kind": "obstruction_check", "status": "planned" }
+  ],
+  "non_claims": [
+    {
+      "non_claim_id": "yang-mills.no-clay-solution",
+      "statement": "This adapter does not claim a solution of the Clay Yang-Mills existence and mass gap problem."
+    },
+    {
+      "non_claim_id": "yang-mills.no-continuum-promotion",
+      "statement": "This adapter does not promote fixed-spacing or finite-cutoff evidence to a continuum construction."
+    },
+    {
+      "non_claim_id": "yang-mills.no-untyped-bridge",
+      "statement": "Every missing bridge must remain assigned to an explicit obstruction wall."
+    }
+  ]
+}
