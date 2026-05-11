@@ -1,0 +1,105 @@
+{
+  "schema_version": "ym.frontier.validation-tranche.v2",
+  "state": "Yang-Mills post-BSD apparatus validation tranche",
+  "claim_boundary": [
+    "This tranche validates Yang-Mills proof-apparatus discipline after BSD #320 closure.",
+    "It does not claim a continuum Yang-Mills construction.",
+    "It does not claim Clay Millennium resolution.",
+    "It does not move the v0.14.4 fixed-spacing strong-coupling wall.",
+    "It does not treat open PRs #22 or #23 as merged theorem-track inputs.",
+    "It treats YM-WP-v0.1 as planning, not theorem-track promotion."
+  ],
+  "repository_alignment_notes": [
+    "Lawful Learning belongs to the HPhD mirror / hphd-zeta-mirror-lattice apparatus lane, not to the Yang-Mills repository.",
+    "This tranche is specifically for SocioProphet/yang-mills.",
+    "Open PRs #22 and #23 remain backlog inputs until separately validated and merged."
+  ],
+  "validated_frontier_inputs": {
+    "theorem_anchor": {
+      "claim": "fixed-spacing strong-coupling SU(2) Wilson lattice transfer gap",
+      "beta_star": "0.006296889394074993",
+      "status": "theorem-track anchor, not continuum"
+    },
+    "obstruction_survey": {
+      "target_version": "v0.18.2",
+      "move": 4,
+      "status": "cross-reference hardening workplan; no new theorem",
+      "requires": [
+        "resolve v0.18.1 deferred references to exact v0.14.4 sections/lemmas/propositions",
+        "verify numerical constants match v0.14.4",
+        "record changelog v0.18.1 -> v0.18.2"
+      ]
+    },
+    "submission_package": {
+      "target_version": "v0.14.4 arXiv/CMP package",
+      "move": 1,
+      "status": "submission packaging workplan after Move 4 hardening",
+      "requires": [
+        "editorial pass",
+        "notation and cross-reference pass",
+        "reproducibility pass",
+        "independent reviewer pass",
+        "arXiv identifiers recorded before internal docs cite them"
+      ]
+    },
+    "wigner_symbol_gate": {
+      "target_version": "v0.9.21",
+      "move": 2,
+      "status": "parallel symbolic derivation workplan; G1/G2 remain open",
+      "requires": [
+        "declared Wigner / Clebsch-Gordan convention",
+        "symbolic Jmax=1/2 5x5 matrix",
+        "entry classification as forced / forbidden / coefficient-dependent",
+        "Phi_111 structural-zero rule proven or refuted",
+        "numerical comparison to v0.9.20 Appendix G1"
+      ]
+    },
+    "lane_vii_frontier": {
+      "active_target": "Lane VII v1.14-FRI three-plane rank-5 stress test",
+      "space": "H_6 = Inv(V_{1/2}^{tensor 6})",
+      "dimension": 5,
+      "scales": ["operator=1", "Frobenius=sqrt(5)", "Catalan=5"],
+      "status": "scaffold/frontier target, not closure theorem"
+    },
+    "open_prs": [
+      {
+        "number": 22,
+        "title": "Capture Phase 3b Jmax1 Gram matrix",
+        "status": "open, stale relative to main",
+        "use_in_tranche": "backlog input; not theorem-track merged input"
+      },
+      {
+        "number": 23,
+        "title": "Add channel-product lane archive v0.1",
+        "status": "open, stale relative to main",
+        "use_in_tranche": "program-context backlog input; not theorem-track merged input"
+      }
+    ]
+  },
+  "required_checks": [
+    "fixed-spacing theorem boundary remains explicit",
+    "Lane VII frontier remains conditional",
+    "YM-WP-v0.1 remains planning-only",
+    "open PRs #22/#23 remain unmerged backlog unless separately validated",
+    "no continuum/Clay claim appears in adapter or status artifact",
+    "three-plane rank-5 stress test is scaffolded without closure claim",
+    "G1/G2 Wigner-symbol gates remain open until v0.9.21 closes them"
+  ],
+  "recommended_execution_order": [
+    "Move 4 first: v0.18.1 to v0.18.2 cross-reference pass",
+    "Move 1 second: v0.14.4 arXiv/CMP submission package after Move 4",
+    "Move 2 in parallel: v0.9.21 Wigner-symbol 5x5 derivation and Phi_111 selection rule"
+  ],
+  "what_to_avoid": [
+    "Do not push N past 1000 as a substitute for bridge work.",
+    "Do not generalize SU(N>=4) before N=3 gates close.",
+    "Do not invest in continuum-construction infrastructure inside this tranche."
+  ],
+  "next_tranche": {
+    "name": "YM Frontier Tranche 1",
+    "governance_step": "SocioSphere proof-apparatus validation on Yang-Mills PR",
+    "execution_step": "upstream YM-WP-v0.1 as draft-for-judge-review plus adapter scaffold",
+    "first_executable_step": "Move 4 cross-reference pass, with Move 2 convention declaration in parallel",
+    "research_step": "three-plane rank-5 scaffold remains Lane VII frontier after workplan validation"
+  }
+}
