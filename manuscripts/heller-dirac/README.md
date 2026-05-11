@@ -11,10 +11,11 @@ The Heller-Dirac sequence is intentionally ordered as:
 (c) geometric foundation
 -> (b) quantum-defect deformation
 -> (a) relativistic / Dirac extension
+-> (f) finite-part boundary constant discipline
 -> (t) finite-table audit and regression checks
 ```
 
-This ordering keeps the manuscript disciplined. The geometric hydrogenic shell must be made precise before adding real-atom defect data, the defect deformation must be clean before lifting to spinor/Dirac bookkeeping, and the finite tables must guard the basis-change claims.
+This ordering keeps the manuscript disciplined. The geometric hydrogenic shell must be made precise before adding real-atom defect data, the defect deformation must be clean before lifting to spinor/Dirac bookkeeping, the finite-part note must explain what kind of boundary constant the defect is, and the finite tables must guard the basis-change claims.
 
 ## Current source files
 
@@ -25,6 +26,7 @@ This ordering keeps the manuscript disciplined. The geometric hydrogenic shell m
 - `06-dictionary-and-tests.md` — records finite sanity checks, failure traps, and acceptance criteria.
 - `07-cg-audit-n2-n4.md` — generated finite Clebsch-Gordan tables and exact projector checks for `n=2,3,4`.
 - `08-channel-kernels-n3-n4.md` — symbolic product-cell channel-kernel matrices for `n=3,4`, plus the Coulomb-limit scalar-collapse check.
+- `09-finite-part-boundary-constants.md` — adapts the finite-part boundary constant principle to Heller-Dirac by identifying quantum defects as channel boundary phase/action residues, not as Yang-Mills finite parts.
 
 ## Reproducibility scripts
 
@@ -49,10 +51,11 @@ Explicit non-claims:
 - no Clay proof;
 - no first-principles prediction of empirical quantum defects;
 - no assertion that Tetryonics cells are themselves irreducible orbital multiplets;
-- no replacement of SU(2) integrality by nonintegral defect labels.
+- no replacement of SU(2) integrality by nonintegral defect labels;
+- no identification of Heller-Dirac channel constants with a Yang-Mills finite-part invariant.
 
 ## Next files planned
 
-1. Add CI once the repository accepts SymPy as a development dependency.
-2. Add numerical example profiles for representative alkali-like defect hierarchies, clearly marked empirical/toy.
-3. Decide whether Heller-Dirac stays here as a sidecar or moves to a dedicated repository while retaining this sidecar as a pointer.
+1. Add numerical example profiles for representative alkali-like defect hierarchies, clearly marked empirical/toy.
+2. Add a dedicated Heller-Dirac extraction plan if this sidecar moves to a standalone repository.
+3. Add a literature note on quantum-defect theory and Coulomb/Dirac-Coulomb boundary matching.
