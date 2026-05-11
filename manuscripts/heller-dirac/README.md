@@ -24,15 +24,18 @@ This ordering keeps the manuscript disciplined. The geometric hydrogenic shell m
 - `05-dirac-kappa-extension.md` — lifts orbital labels to Dirac `kappa` channels and separates branch bookkeeping from later field-level particle taxonomy.
 - `06-dictionary-and-tests.md` — records finite sanity checks, failure traps, and acceptance criteria.
 - `07-cg-audit-n2-n4.md` — generated finite Clebsch-Gordan tables and exact projector checks for `n=2,3,4`.
+- `08-channel-kernels-n3-n4.md` — symbolic product-cell channel-kernel matrices for `n=3,4`, plus the Coulomb-limit scalar-collapse check.
 
-## Reproducibility script
+## Reproducibility scripts
 
 - `../../scripts/heller_dirac_cg_audit.py` — regenerates the small-`n` Clebsch-Gordan tables and verifies fixed-`M` projector completeness, idempotence, and orthogonality exactly with SymPy.
+- `../../scripts/heller_dirac_channel_kernels.py` — computes symbolic fixed-`M` channel kernels and verifies that equal channel shifts collapse every block to a scalar matrix.
 
-Expected command from repository root:
+Expected commands from repository root:
 
 ```bash
 python scripts/heller_dirac_cg_audit.py --n 2 3 4
+python scripts/heller_dirac_channel_kernels.py --n 3 4
 ```
 
 ## Claim boundary
@@ -50,6 +53,6 @@ Explicit non-claims:
 
 ## Next files planned
 
-1. Add product-cell defect matrices for `n=3,4` in symbolic delta form.
-2. Add a CI job if the repository decides to accept SymPy as a development dependency.
+1. Add CI once the repository accepts SymPy as a development dependency.
+2. Add numerical example profiles for representative alkali-like defect hierarchies, clearly marked empirical/toy.
 3. Decide whether Heller-Dirac stays here as a sidecar or moves to a dedicated repository while retaining this sidecar as a pointer.
