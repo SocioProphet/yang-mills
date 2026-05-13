@@ -36,6 +36,7 @@ Status: running backlog seeded from the v0.18.1 review, Lane II planning pass, a
 - Use spanning tree plus Schatten-Hölder strategy.
 - Verify unitary Temperley-Lieb/Wigner normal form against the Reisenberger/Wilson amplitude.
 - Run the KP insertion audit only after closure is established.
+- Define the projection-like Wilson-screen object `Pi_screen : H_bulk -> H_screen`, including its domain, codomain, norm choice, recoupling compatibility, residual leakage object `E`, and non-claim boundary. This follows the Baez-Taylor finite-N projection bridge captured under `docs/program-context/baez-taylor-finite-n-projection-bridge.md`.
 
 ### P0 - Lane II theorem target A
 
@@ -76,6 +77,7 @@ Status: running backlog seeded from the v0.18.1 review, Lane II planning pass, a
 - Preserve the Hopf-shell scaffold as non-load-bearing taxonomy.
 - Preserve the Einstein-Heller typed projection/fiber analogy as methodology only.
 - Preserve neural operators as computational diagnostics only.
+- Preserve the Baez-Taylor finite-N projection bridge as methodology for explicit projection/admissibility laws; do not promote it to theorem-track machinery.
 - Add an even stronger non-claim box.
 - Add a mapping table back to the external obstruction taxonomy.
 
@@ -136,10 +138,11 @@ Status: running backlog seeded from the v0.18.1 review, Lane II planning pass, a
 ### Lane VII - holographic screen-invariant synthesis
 
 1. Store v0.1, v0.5, v0.8, v1.0, and v1.2 artifacts.
-2. Attempt cyclic Frobenius closure.
-3. If cyclic closure succeeds, perform KP insertion audit.
-4. If cyclic closure fails at Catalan scale, classify cubic Lane VII as non-wall-moving by this route.
-5. If cyclic closure is Frobenius with subexponential defect, compute improved certificate window.
+2. Define the screen-projection specification `Pi_screen : H_bulk -> H_screen` before using projection language in theorem-track drafts.
+3. Attempt cyclic Frobenius closure.
+4. If cyclic closure succeeds, perform KP insertion audit.
+5. If cyclic closure fails at Catalan scale, classify cubic Lane VII as non-wall-moving by this route.
+6. If cyclic closure is Frobenius with subexponential defect, compute improved certificate window.
 
 ## Done in this seed pass
 
