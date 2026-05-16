@@ -2,98 +2,115 @@
 
 ## Upstream
 
-| Repository | Commit SHA | Cited content |
+This repository consumes from two upstream framework repositories. Both pins are required for citation-surface validation.
+
+| Repository | Commit SHA | Role |
 |---|---|---|
-| `SocioProphet/Heller-Godel` | `0ef1cab4c525fd004e38fa9a92f7e911acbbc976` | Framework objects (`HG-*`) from `docs/framework-core/`; PFK operational substrate from `proof_fabric_kernel/` |
+| `SocioProphet/Heller-Godel` | `fb6b866f1b9b4089629cac18c179c32863bf42e4` | Framework core; framework objects (`HG-*`); PFK operational substrate (`PFK-*`); framework anti-seed (`A-HG-*`, `A-PFK-*`) |
+| `SocioProphet/Heller-Dirac` | `e1d7c863f4e0fc6e5e2ab485370cc75b2dba3993` | Co-foundational spectral / Hopf / time / field scaffold; spectral-triple vocabulary (`HD-*`); Heller-Dirac anti-seed (`A-HD-*`) |
+
+Both pins are not floating. Re-pinning requires an explicit dependency PR.
 
 ## Cited objects
 
-### Framework-grade (HG-*)
+### From Heller-Godel @ `fb6b866f1b9b4089629cac18c179c32863bf42e4`
+
+#### Framework-grade (HG-*)
 
 | Identifier | Role | Notes |
 |---|---|---|
 | `HG-FND-*` | Foundational vocabulary | typing only; specific identifiers cited at point of use |
-| `HG-EX-001` | Catalan / mu_2 fixture | available for any mu_2 parity computation in SU(2) representation theory if such computation enters the manuscript |
-| `HG-MTH-001` | Universal Bridge method-grade analogy | cited as conceptual scaffold for cross-Clay claim-discipline pattern; does not transfer proofs |
+| `HG-MTH-005` | Universal Bridge formal specification | parent / general bridge axiom; does not transfer proofs |
+| `HG-MTH-007` | Universal Bridge: Yang-Mills gauge domain extension | canonical YM bridge spec; yang-mills is the primary consumer |
 
-### PFK operational substrate (canonical seed-tree identifiers)
+#### PFK operational substrate
 
-The yang-mills program consumes the canonical seed-tree operator catalog from `SocioProphet/Heller-Godel/proof_fabric_kernel/`. Citation uses the operator identifiers currently registered in the seed tree:
-
-| Identifier | Catalog role | Yang-Mills use |
+| Identifier | Role | Yang-Mills use |
 |---|---|---|
-| `PFK-OP-001` | Event ingestion | for any future receipt emission from Lane II measurements |
-| `PFK-OP-010` | Phase-map operator | available if Lane II quantitative work uses phase-space methods |
-| `PFK-OP-020` | Null-model operator | required for any descriptive-grade empirical claim |
-| `PFK-OP-030` | Calibration operator | for numerical-baseline sanity checks |
-| `PFK-OP-040` | Catalan / mu_2 fixture operator | unused initially; reserved for future cross-program work |
-| `PFK-OP-050` | PrimeStatsProtocol operator family | required for any empirical claim |
+| `PFK-OP-001` | Event ingestion | future receipt emission |
+| `PFK-OP-030` | Calibration operator | numerical baselines for Wilson-lattice checks |
+| `PFK-SCHEMA-001..004` | claim ledger / Event-IR / proof artifact / calibration bundle | future typed receipts |
 
-### PFK schema paths (by canonical path, identifiers TBD)
+#### Framework anti-seed
 
-PFK schemas are cited by exact path until granular `PFK-SCHEMA-*` identifiers are registered in a subsequent Heller-Godel registry-expansion PR:
-
-| Schema path | Role |
+| Identifier | Applies because |
 |---|---|
-| `proof_fabric_kernel/schemas/event_ir.schema.json` | Event-IR records for operator invocations |
-| `proof_fabric_kernel/schemas/proof_artifact.schema.json` | proof-step envelopes |
-| `proof_fabric_kernel/schemas/calibration_bundle.schema.json` | numerical baseline checks |
-| `proof_fabric_kernel/schemas/claim_ledger_row.schema.json` | claim ledger rows |
+| `A-HG-MTH-001` | Universal Bridge does not transfer proofs |
+| `A-HG-MTH-002` | Catalan / mu2 fixture is not Clay progress |
+| `A-HG-MTH-003` | fixture-grade and theorem-grade citations must not be mixed |
+| `A-HG-MTH-004` | Standard Conjectures / related conjectural apparatus cited diagnostically are not assumed |
+| `A-HG-MTH-005` | barrier-diagnostic frame is not a circumvention recipe |
+| `A-HG-MTH-006` | component apparatus is not Clay-grade Yang-Mills resolution |
+
+#### PFK anti-seed
+
+| Identifier | Applies because |
+|---|---|
+| `A-PFK-OP-001` | operator invocation is not evidence |
+| `A-PFK-PROTOCOL-001` | null passage is not theorem-grade |
+| `A-PFK-PROTOCOL-002` | window-shopping prevention |
+| `A-PFK-SCHEMA-001` | schema validity is not content validity |
+| `A-PFK-SCHEMA-002` | schema-version drift; pins are not floating |
+| `A-PFK-VAL-001` | validator green is not audit completion |
+
+### From Heller-Dirac @ `e1d7c863f4e0fc6e5e2ab485370cc75b2dba3993`
+
+#### Foundational (HD-FND-*)
+
+| Identifier | Role in Yang-Mills citation |
+|---|---|
+| `HD-FND-001` | spectral triple definition, cited through HG-MTH-007 Component 3 |
+| `HD-FND-003` | KO-dimension table, including KO-dim 6 Standard Model context |
+| `HD-FND-006` | spectral action principle, cited through HG-MTH-007 Component 3 |
+| `HD-FND-010` | Hopf-algebra action on spectral triple, cited for Connes-Kreimer renormalization scaffold context |
+
+#### Heller-Dirac anti-seed (A-HD-*)
+
+| Identifier | Applies because |
+|---|---|
+| `A-HD-FT-001` | AQFT axioms are not constructive existence |
+| `A-HD-HA-001` | Hopf-scaffold encoding is not renormalizability proof |
+| `A-HD-NC-001` | noncommutative-geometric reformulation is not proof |
+| `A-HD-SP-001` | analog spectral data is not target spectral data |
+| `A-HD-FND-001` | HD-FND identifiers are reference surface, not reproof |
 
 ## Citation form
 
-When citing a framework or PFK object in this repository, use:
-
 ```text
-[HG-FND-001 @ 0ef1cab4c525fd004e38fa9a92f7e911acbbc976]
-[PFK-OP-050 @ 0ef1cab4c525fd004e38fa9a92f7e911acbbc976]
-[proof_fabric_kernel/schemas/event_ir.schema.json @ 0ef1cab4c525fd004e38fa9a92f7e911acbbc976]
+[HG-MTH-005 @ fb6b866f1b9b4089629cac18c179c32863bf42e4]
+[HG-MTH-007 @ fb6b866f1b9b4089629cac18c179c32863bf42e4]
+[PFK-SCHEMA-001 @ fb6b866f1b9b4089629cac18c179c32863bf42e4]
+[A-HG-MTH-006 @ fb6b866f1b9b4089629cac18c179c32863bf42e4]
+[HD-FND-001 @ e1d7c863f4e0fc6e5e2ab485370cc75b2dba3993]
+[HD-FND-003 @ e1d7c863f4e0fc6e5e2ab485370cc75b2dba3993]
+[HD-FND-006 @ e1d7c863f4e0fc6e5e2ab485370cc75b2dba3993]
+[HD-FND-010 @ e1d7c863f4e0fc6e5e2ab485370cc75b2dba3993]
+[A-HD-FT-001 @ e1d7c863f4e0fc6e5e2ab485370cc75b2dba3993]
+[A-HD-HA-001 @ e1d7c863f4e0fc6e5e2ab485370cc75b2dba3993]
+[A-HD-NC-001 @ e1d7c863f4e0fc6e5e2ab485370cc75b2dba3993]
+[A-HD-SP-001 @ e1d7c863f4e0fc6e5e2ab485370cc75b2dba3993]
+[A-HD-FND-001 @ e1d7c863f4e0fc6e5e2ab485370cc75b2dba3993]
 ```
-
-The commit SHA is the merged Heller-Godel commit, not the current `main` HEAD. This guarantees citation stability across upstream schema evolution.
 
 ## Forbidden edges
 
-- `yang-mills` -> any other Clay-program repo (no horizontal dependencies between Clay targets)
-- `yang-mills` -> Heller-Godel-other-than-pinned-commit (no floating `main` references)
-- `yang-mills` -> automorphic / number-theoretic methodology from RH or Hodge programs except through the Universal Bridge method-grade analogy (`HG-MTH-001`)
+- `yang-mills` -> any other Clay-program repo.
+- `yang-mills` -> Heller-Godel-other-than-pinned-commit.
+- `yang-mills` -> Heller-Dirac-other-than-pinned-commit.
+- `yang-mills` -> constructive QFT / spectral-action methodology beyond what HG-MTH-007 cites diagnostically.
 
-## Scope discipline (unchanged by this declaration)
+## Scope discipline unchanged
 
-The yang-mills program's v0.14.4 scope discipline is preserved:
+The yang-mills v0.14.4 scope discipline is preserved:
 
-- Gauge group: SU(2)
-- Lattice: Wilson lattice gauge theory on `Z^4`
-- Lattice spacing: fixed `a > 0`
-- Coupling window: `beta < beta* = 0.006296889394074993`
-- Output: positive transfer gap above the vacuum in the infinite-volume gauge-invariant Osterwalder-Seiler reflection-positive Hilbert space
+- gauge group: `SU(2)`;
+- lattice: Wilson lattice gauge theory on `Z^4`;
+- lattice spacing: fixed `a > 0`;
+- coupling window: `beta < beta* = 0.006296889394074993`;
+- output: positive transfer gap above the vacuum in the infinite-volume gauge-invariant Osterwalder-Seiler reflection-positive Hilbert space.
 
-This declaration does not:
-
-- Promote v0.14.4 to a continuum construction
-- Promote v0.14.4 to a Clay Millennium proof
-- Promote v0.14.4 to a weak-coupling theorem
-- Promote v0.14.4 to an SU(N>=3) theorem
-- Promote v0.14.4 to an asymptotic-freedom trajectory result
-
-Per forward anti-seed convention, pending Heller-Godel PFK registry expansion:
-
-- the Universal Bridge is method-grade analogy only; it does not transfer proofs from RH-program work to YM-program work;
-- PFK operator invocation is not evidence for any YM Clay statement.
-
-## When this declaration triggers downstream work
-
-A future yang-mills PR that emits empirical receipts (Lane II fiber-sensitive sharpening numerical work) will need to:
-
-1. add an `experiments/` directory analogous to `Heller-Winters-Theorem/experiments/candidate-c/`;
-2. add a `tests/test_yang_mills_emission.py` validator using the same pattern as HW PR #39;
-3. add a CI workflow checking out Heller-Godel at the pinned commit and running the validator;
-4. emit PFK-schema-conformant receipts for each Lane II measurement.
-
-This DEPENDENCIES PR establishes the pin and the citation surface. It does not yet trigger receipt emission; receipts come in a subsequent Lane II PR.
+This dependency update does not promote v0.14.4 to a continuum construction, Clay Millennium proof, weak-coupling theorem, `SU(N>=3)` theorem, or asymptotic-freedom trajectory result.
 
 ## Schema-version pinning policy
 
-Schema major-version changes are breaking. Re-pinning the Heller-Godel commit SHA requires re-verifying any existing receipts under `experiments/` against the new schemas. Until empirical receipts exist in this repo, the pin can be advanced more freely; once receipts exist, re-pinning is a migration event.
-
-This is per forward anti-seed convention `A-PFK-SCHEMA-002` (schema-version drift), which will canonicalize in the upstream PFK registry-expansion PR.
+Both upstream pins are fixed. Re-pinning either upstream requires a dedicated migration PR and validation of all affected citations.
