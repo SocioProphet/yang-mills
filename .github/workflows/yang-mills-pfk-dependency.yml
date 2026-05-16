@@ -1,0 +1,43 @@
+name: yang-mills PFK Dependency Validation
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  validate-dependency-pins:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout yang-mills
+        uses: actions/checkout@v4
+        with:
+          path: yang-mills
+
+      - name: Checkout Heller-Godel at pinned commit
+        uses: actions/checkout@v4
+        with:
+          repository: SocioProphet/Heller-Godel
+          ref: fb6b866f1b9b4089629cac18c179c32863bf42e4
+          path: Heller-Godel
+
+      - name: Checkout Heller-Dirac at pinned commit
+        uses: actions/checkout@v4
+        with:
+          repository: SocioProphet/Heller-Dirac
+          ref: e1d7c863f4e0fc6e5e2ab485370cc75b2dba3993
+          path: Heller-Dirac
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run dependency validation
+        env:
+          HELLER_GODEL_ROOT: ${{ github.workspace }}/Heller-Godel
+          HELLER_DIRAC_ROOT: ${{ github.workspace }}/Heller-Dirac
+        run: |
+          cd yang-mills
+          python -m unittest tests/test_dependency_pins.py -v
